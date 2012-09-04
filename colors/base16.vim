@@ -40,7 +40,7 @@ let s:cterm0F = "17"
 " Theme Setup
 hi clear
 syntax reset
-let g:colors_name = "Tomorrow"
+let g:colors_name = "base16"
 
 " Highlighting function
 fun! <SID>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
