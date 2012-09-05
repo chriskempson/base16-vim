@@ -1,4 +1,16 @@
 # Base16 Vim
-This theme provides both 16 and 256 colors. For terminal vim (non-gui) please ensure you are using [base16-iterm2](https://raw.github.com/chriskempson/base16-iterm2) and/or [base16-shell](https://raw.github.com/chriskempson/base16-shell).
+See the [Base16 repository](https://github.com/chriskempson/base16) for more information.  
+This theme was built with [Base16 Builder](https://github.com/chriskempson/base16-builder).
+
+Supports graphical Vim and console Vim.
+For terminal vim (non-gui) please ensure you are using [base16-iterm2](https://raw.github.com/chriskempson/base16-iterm2) and [base16-shell](https://raw.github.com/chriskempson/base16-shell).
 
 ![Base16 Vim](https://raw.github.com/chriskempson/base16-vim/master/base16-vim.png)
+
+## Installation
+To use the dark theme ensure `set background=dark` is present in your `~/.vimrc` file. Otherwise Vim will use the light variation by default.
+
+If using Vundle add the following to your `~/.vimrc` file.
+    Bundle 'chriskempson/base16-vim'
+
+Otherwise copy the files to `~/.vim/colors`.
