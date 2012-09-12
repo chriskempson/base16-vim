@@ -10,7 +10,12 @@ For terminal vim (non-gui) please ensure you are using a base16 terminal theme.
 ## Installation
 To use the dark theme ensure `set background=dark` is present in your `~/.vimrc` file. Otherwise Vim will use the light variation by default.
 
-If using Vundle add the following to your `~/.vimrc` file.
+### Vundle
+Add the following to your `~/.vimrc` file.
+
     Bundle 'chriskempson/base16-vim'
 
-Otherwise copy the files to `~/.vim/colors`.
+### Manual
+    cd ~/.vim/colors
+    git clone git://github.com/chriskempson/base16-vim.git base16
+    cp base16/colors/*.vim .
