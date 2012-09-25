@@ -1,23 +1,23 @@
-" Base16 Default (https://github.com/chriskempson/base16)
+" Base16 Ocean (https://github.com/chriskempson/base16)
 " Scheme: Chris Kempson (http://chriskempson.com)
 
 " GUI Base16 Color Definitions
-let s:gui00 = "151515"
-let s:gui01 = "202020"
-let s:gui02 = "303030"
-let s:gui03 = "505050"
-let s:gui04 = "b0b0b0"
-let s:gui05 = "d0d0d0"
-let s:gui06 = "e0e0e0"
-let s:gui07 = "f5f5f5"
-let s:gui08 = "ac4142"
-let s:gui09 = "d28445"
-let s:gui0A = "f4bf75"
-let s:gui0B = "90a959"
-let s:gui0C = "75b5aa"
-let s:gui0D = "6a9fb5"
-let s:gui0E = "aa759f"
-let s:gui0F = "8f5536"
+let s:gui00 = "2B303B"
+let s:gui01 = "343D46"
+let s:gui02 = "4F5B66"
+let s:gui03 = "65737E"
+let s:gui04 = "A7ADBA"
+let s:gui05 = "C0C5CE"
+let s:gui06 = "DFE1E8"
+let s:gui07 = "EFF1F5"
+let s:gui08 = "CB716E"
+let s:gui09 = "D08770"
+let s:gui0A = "EBCB8B"
+let s:gui0B = "A3BE8C"
+let s:gui0C = "96B5B4"
+let s:gui0D = "8FA1B3"
+let s:gui0E = "B48EAD"
+let s:gui0F = "AB7967"
 
 " Terminal Base16 Color Definitions
 let s:cterm00 = "00"
@@ -49,7 +49,7 @@ endif
 " Theme Setup
 hi clear
 syntax reset
-let g:colors_name = "base16-default"
+let g:colors_name = "base16-ocean"
 
 " Highlighting function
 fun! <SID>hi(group, guifg, guibg, ctermfg, ctermbg, attr)

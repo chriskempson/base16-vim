@@ -105,6 +105,12 @@ if &background == "dark"
   call <SID>hi("StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
   call <SID>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none")
 
+  " Diff Highlighting
+  call <SID>hi("DiffAdd",      s:gui0B, s:gui00, s:cterm0B, s:cterm00, "")
+  call <SID>hi("DiffChange",   s:gui05, s:gui00, s:cterm05, s:cterm00, "")
+  call <SID>hi("DiffDelete",   s:gui08, s:gui00, s:cterm08, s:cterm00, "")
+  call <SID>hi("DiffText",     s:gui0D, s:gui00, s:cterm0D, s:cterm00, "")
+
   if version >= 700
     call <SID>hi("ColorColumn",  "", s:gui01, "", s:cterm01, "none")
     call <SID>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none")
@@ -124,6 +130,12 @@ else
   call <SID>hi("StatusLine",    s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("StatusLineNC",  s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("VertSplit",     s:gui05, s:gui05, s:cterm05, s:cterm05, "none")
+
+  " Diff Highlighting
+  call <SID>hi("DiffAdd",      s:gui0B, s:gui0F, s:cterm0B, s:cterm0F, "")
+  call <SID>hi("DiffChange",   s:gui05, s:gui0F, s:cterm05, s:cterm0F, "")
+  call <SID>hi("DiffDelete",   s:gui08, s:gui0F, s:cterm08, s:cterm0F, "")
+  call <SID>hi("DiffText",     s:gui0D, s:gui0F, s:cterm0D, s:cterm0F, "")
 
   if version >= 700
     call <SID>hi("CursorColumn",  "", s:gui06, "", s:cterm06, "none")
@@ -173,11 +185,11 @@ call <SID>hi("SpellBad",     s:gui00, s:gui08, s:cterm00, s:cterm08, "")
 "call <SID>hi("SpellLocal",  s:gui00, s:gui08, s:cterm00, s:cterm08, "")
 
 " Diff Highlighting
-call <SID>hi("DiffAdded",    s:gui0B, "", s:cterm0B, "", "reverse")
+call <SID>hi("DiffAdded",    s:gui0B, "", s:cterm0B, "", "")
 call <SID>hi("DiffFile",     s:gui08, "", s:cterm08, "", "")
 call <SID>hi("DiffNewFile",  s:gui0B, "", s:cterm0B, "", "")
 call <SID>hi("DiffLine",     s:gui0D, "", s:cterm0D, "", "")
-call <SID>hi("DiffRemoved",  s:gui08, "", s:cterm08, "", "reverse")
+call <SID>hi("DiffRemoved",  s:gui08, "", s:cterm08, "", "")
 
 " Ruby Highlighting
 call <SID>hi("rubyAttribute",               s:gui0D, "", s:cterm0D, "", "")
