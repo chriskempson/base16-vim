@@ -96,7 +96,7 @@ call <SID>hi("WarningMsg",    s:gui08, "", s:cterm08, "", "")
 call <SID>hi("WildMenu",      s:gui08, "", s:cterm08, "", "")
 
 if &background == "dark"
-  call <SID>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:gui05, "")
+  call <SID>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "")
   call <SID>hi("NonText",       s:gui03, "", s:cterm03, "", "")
   call <SID>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "")
   call <SID>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "")
