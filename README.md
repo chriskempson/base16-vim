@@ -27,9 +27,11 @@ Add the following to your `~/.vimrc` file.
     cp base16/colors/*.vim .
     
 ## 265 colorspace 
-If you're use a terminal theme designed to keep the 16 ANSI colors intact (a "256" variation) and are have modified your 256 colorspace with [base16-shell](https://github.com/chriskempson/base16-shell) you'll need to the following to your `~/.vimrc`.
+If using a Base16 terminal theme designed to keep the 16 ANSI colors intact (a "256" variation) and have sucessfully modified your 256 colorspace with [base16-shell](https://github.com/chriskempson/base16-shell) you'll need to add the following to your `~/.vimrc`.
 
     let base16colorspace=256  " Access colors present in 256 colorspace
+
+This will cause vim to acess the colours in the modified 256 colorpsace. Please **do not** enable this simply because you have a 256 color terminal as this will cause colors to be displayed incorrectly. 
     
 ## Contribution
 As these themes are built with [Base16 Builder](https://github.com/chriskempson/base16-builder), no pull requests will be merged directly into this repo.
