@@ -171,10 +171,10 @@ call <SID>hi("Type",         s:gui09, "", s:cterm09, "", "none")
 call <SID>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "")
 
 " Spelling Highlighting
-call <SID>hi("SpellBad",     s:gui00, s:gui08, s:cterm00, s:cterm08, "")
+call <SID>hi("SpellBad",     s:gui05, s:gui00, s:cterm05, s:cterm08, "")
+call <SID>hi("SpellLocal",   s:gui05, s:gui00, s:cterm05, s:cterm0D, "")
 "call <SID>hi("SpellCap",    s:gui00, s:gui08, s:cterm00, s:cterm08, "")
 "call <SID>hi("SpellRare",   s:gui00, s:gui08, s:cterm00, s:cterm08, "")
-"call <SID>hi("SpellLocal",  s:gui00, s:gui08, s:cterm00, s:cterm08, "")
 
 " Additional Diff Highlighting
 call <SID>hi("DiffAdded",    s:gui0B, "", s:cterm0B, "", "")
