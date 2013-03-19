@@ -70,6 +70,9 @@ fun! <SID>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
   endif
 endfun
 
+" Clear highlighting
+highlight clear SignColumn
+
 " Vim Editor Colors
 call <SID>hi("Bold",          "", "", "", "", "bold")
 call <SID>hi("Debug",         s:gui08, "", s:cterm08, "", "")
@@ -110,13 +113,9 @@ if &background == "dark"
   call <SID>hi("CursorLineNr",  s:gui03, s:gui01, s:cterm03, s:cterm01, "")
   call <SID>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none")
   call <SID>hi("PMenuSel",      s:gui04, s:gui01, s:cterm04, s:cterm01, "reverse")
-  call <SID>hi("TabLine",       s:gui05, s:gui01, s:cterm05, s:cterm01, "reverse")
-  call <SID>hi("TabLineFill",   s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
-  call <SID>hi("TabLineSel",    s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
-  call <SID>hi("DiffAdd",       s:gui0B, s:gui00, s:cterm0B, s:cterm00, "")
-  call <SID>hi("DiffChange",    s:gui05, s:gui00, s:cterm05, s:cterm00, "")
-  call <SID>hi("DiffDelete",    s:gui08, s:gui00, s:cterm08, s:cterm00, "")
-  call <SID>hi("DiffText",      s:gui0D, s:gui00, s:cterm0D, s:cterm00, "")
+  call <SID>hi("TabLine",       s:gui05, s:gui01, s:cterm05, s:cterm01, "none")
+  call <SID>hi("TabLineFill",   s:gui06, s:gui01, s:cterm06, s:cterm01, "none")
+  call <SID>hi("TabLineSel",    s:gui06, s:gui01, s:cterm06, s:cterm01, "none")
 else
   call <SID>hi("Cursor",        s:gui00, s:gui02, s:cterm00, s:cterm02, "")
   call <SID>hi("NonText",       s:gui05, "", s:cterm05, "", "")
@@ -134,10 +133,6 @@ else
   call <SID>hi("TabLine",       s:gui05, s:gui01, s:cterm05, s:cterm01, "reverse")
   call <SID>hi("TabLineFill",   s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
   call <SID>hi("TabLineSel",    s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
-  call <SID>hi("DiffAdd",       s:gui0B, s:gui0F, s:cterm0B, s:cterm0F, "")
-  call <SID>hi("DiffChange",    s:gui05, s:gui0F, s:cterm05, s:cterm0F, "")
-  call <SID>hi("DiffDelete",    s:gui08, s:gui0F, s:cterm08, s:cterm0F, "")
-  call <SID>hi("DiffText",      s:gui0D, s:gui0F, s:cterm0D, s:cterm0F, "")
 endif
 
 " Standard Syntax Highlighting
@@ -177,6 +172,10 @@ call <SID>hi("SpellLocal",   s:gui05, s:gui00, s:cterm05, s:cterm0D, "")
 "call <SID>hi("SpellRare",   s:gui00, s:gui08, s:cterm00, s:cterm08, "")
 
 " Additional Diff Highlighting
+call <SID>hi("DiffAdd",      s:gui0B, "", s:cterm0B, "", "")
+call <SID>hi("DiffChange",   s:gui05, "", s:cterm05, "", "")
+call <SID>hi("DiffDelete",   s:gui08, "", s:cterm08, "", "")
+call <SID>hi("DiffText",     s:gui0D, "", s:cterm0D, "", "")
 call <SID>hi("DiffAdded",    s:gui0B, "", s:cterm0B, "", "")
 call <SID>hi("DiffFile",     s:gui08, "", s:cterm08, "", "")
 call <SID>hi("DiffNewFile",  s:gui0B, "", s:cterm0B, "", "")
