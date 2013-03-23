@@ -105,7 +105,7 @@ if &background == "dark"
   call <SID>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none")
   call <SID>hi("StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
   call <SID>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none")
-  call <SID>hi("ColorColumn",  "", s:gui01, "", s:cterm01, "none")
+  call <SID>hi("ColorColumn",   "", s:gui01, "", s:cterm01, "none")
   call <SID>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none")
   call <SID>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none")
   call <SID>hi("CursorLineNr",  s:gui03, s:gui01, s:cterm03, s:cterm01, "")
@@ -124,6 +124,7 @@ else
   call <SID>hi("StatusLine",    s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("StatusLineNC",  s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
   call <SID>hi("VertSplit",     s:gui05, s:gui05, s:cterm05, s:cterm05, "none")
+  call <SID>hi("ColorColumn",   "", s:gui06, "", s:cterm06, "none")
   call <SID>hi("CursorColumn",  "", s:gui06, "", s:cterm06, "none")
   call <SID>hi("CursorLine",    "", s:gui06, "", s:cterm06, "none")
   call <SID>hi("CursorLineNr",  s:gui04, s:gui06, s:cterm04, s:cterm06, "")
@@ -227,9 +228,16 @@ call <SID>hi("gitCommitOverflow",  s:gui08, "", s:cterm08, "", "")
 call <SID>hi("gitCommitSummary",   s:gui0B, "", s:cterm0B, "", "")
   
 " GitGutter Highlighting
-call <SID>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "")
-call <SID>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "")
-call <SID>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "")
+if &background == "dark"
+  call <SID>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "")
+  call <SID>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "")
+  call <SID>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "")
+else
+  call <SID>hi("GitGutterAdd",     s:gui0B, s:gui06, s:cterm0B, s:cterm06, "")
+  call <SID>hi("GitGutterChange",  s:gui0D, s:gui06, s:cterm0D, s:cterm06, "")
+  call <SID>hi("GitGutterDelete",  s:gui08, s:gui06, s:cterm08, s:cterm06, "")
+endif
+
 
 " GitGutter Highlighting
 call <SID>hi("NERDTreeDirSlash",  s:gui0D, "", s:cterm0D, "", "")
