@@ -1,23 +1,23 @@
-" Base16 Mocha (https://github.com/chriskempson/base16)
+" Base16 Pop (https://github.com/chriskempson/base16)
 " Scheme: Chris Kempson (http://chriskempson.com)
 
 " GUI Base16 Color Definitions
-let s:gui00 = "3B3228"
-let s:gui01 = "534636"
-let s:gui02 = "645240"
-let s:gui03 = "7e705a"
-let s:gui04 = "b8afad"
-let s:gui05 = "d0c8c6"
-let s:gui06 = "e9e1dd"
-let s:gui07 = "f5eeeb"
-let s:gui08 = "cb6077"
-let s:gui09 = "d28b71"
-let s:gui0A = "f4bc87"
-let s:gui0B = "beb55b"
-let s:gui0C = "7bbda4"
-let s:gui0D = "8ab3b5"
-let s:gui0E = "a89bb9"
-let s:gui0F = "bb9584"
+let s:gui00 = "000000"
+let s:gui01 = "202020"
+let s:gui02 = "303030"
+let s:gui03 = "505050"
+let s:gui04 = "b0b0b0"
+let s:gui05 = "d0d0d0"
+let s:gui06 = "e0e0e0"
+let s:gui07 = "ffffff"
+let s:gui08 = "eb008a"
+let s:gui09 = "f29333"
+let s:gui0A = "f8ca12"
+let s:gui0B = "37b349"
+let s:gui0C = "00aabb"
+let s:gui0D = "0e5a94"
+let s:gui0E = "b31e8d"
+let s:gui0F = "7a2d00"
 
 " Terminal Base16 Color Definitions
 let s:cterm00 = "00"
@@ -49,81 +49,25 @@ endif
 " Theme Setup
 hi clear
 syntax reset
-let g:colors_name = "base16-mocha"
+let g:colors_name = "base16-pop"
 
 " Highlighting function
 fun! <SID>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
   if a:guifg != ""
-    exec "hi " . a:group . " guifg=#" . s:DarkOrLightGui(a:guifg)
+    exec "hi " . a:group . " guifg=#" . a:guifg
   endif
   if a:guibg != ""
-    exec "hi " . a:group . " guibg=#" . s:DarkOrLightGui(a:guibg)
+    exec "hi " . a:group . " guibg=#" . a:guibg
   endif
   if a:ctermfg != ""
-    exec "hi " . a:group . " ctermfg=" . s:DarkOrLightCterm(a:ctermfg)
+    exec "hi " . a:group . " ctermfg=" . a:ctermfg
   endif
   if a:ctermbg != ""
-    exec "hi " . a:group . " ctermbg=" . s:DarkOrLightCterm(a:ctermbg)
+    exec "hi " . a:group . " ctermbg=" . a:ctermbg
   endif
   if a:attr != ""
     exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
   endif
-endfun
-
-fun s:DarkOrLightGui(color)
-  if &background == "dark"
-    return a:color
-  endif
-
-  if a:color == s:gui00
-    return s:gui07
-  elseif a:color == s:gui01
-    return s:gui06
-  elseif a:color == s:gui02
-    return s:gui05
-  elseif a:color == s:gui03
-    return s:gui04
-  elseif a:color == s:gui04
-    return s:gui03
-  elseif a:color == s:gui05
-    return s:gui02
-  elseif a:color == s:gui05
-    return s:gui02
-  elseif a:color == s:gui06
-    return s:gui01
-  elseif a:color == s:gui07
-    return s:gui00
-  endif
-
-  return a:color
-endfun
-
-fun s:DarkOrLightCterm(color)
-  if &background == "dark"
-    return a:color
-  endif
-
-  if a:color == s:cterm00
-    return s:cterm07
-  elseif a:color == s:cterm01
-    return s:cterm06
-  elseif a:color == s:cterm02
-    return s:cterm05
-  elseif a:color == s:cterm03
-    return s:cterm04
-  elseif a:color == s:cterm04
-    return s:cterm03
-  elseif a:color == s:cterm05
-    return s:cterm02
-  elseif a:color == s:cterm05
-    return s:cterm02
-  elseif a:color == s:cterm06
-    return s:cterm01
-  elseif a:color == s:cterm07
-    return s:cterm00
-  endif
-
-  return a:color
 endfun
 
 " Vim Editor Colors
@@ -151,25 +95,45 @@ call <SID>hi("WarningMsg",    s:gui08, "", s:cterm08, "", "")
 call <SID>hi("WildMenu",      s:gui08, "", s:cterm08, "", "")
 call <SID>hi("Title",         s:gui0D, "", s:cterm0D, "", "none")
 
-call <SID>hi("Conceal",       s:gui0D, s:gui00, s:cterm0D, s:cterm00, "")
-call <SID>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "")
-call <SID>hi("NonText",       s:gui03, "", s:cterm03, "", "")
-call <SID>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "")
-call <SID>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "")
-call <SID>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "")
-call <SID>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "")
-call <SID>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none")
-call <SID>hi("StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
-call <SID>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none")
-call <SID>hi("ColorColumn",   "", s:gui01, "", s:cterm01, "none")
-call <SID>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none")
-call <SID>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none")
-call <SID>hi("CursorLineNr",  s:gui03, s:gui01, s:cterm03, s:cterm01, "")
-call <SID>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none")
-call <SID>hi("PMenuSel",      s:gui04, s:gui01, s:cterm04, s:cterm01, "reverse")
-call <SID>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
-call <SID>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
-call <SID>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none")
+if &background == "dark"
+  call <SID>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "")
+  call <SID>hi("NonText",       s:gui03, "", s:cterm03, "", "")
+  call <SID>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "")
+  call <SID>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "")
+  call <SID>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "")
+  call <SID>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "")
+  call <SID>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none")
+  call <SID>hi("StatusLineNC",  s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
+  call <SID>hi("VertSplit",     s:gui02, s:gui02, s:cterm02, s:cterm02, "none")
+  call <SID>hi("ColorColumn",   "", s:gui01, "", s:cterm01, "none")
+  call <SID>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none")
+  call <SID>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none")
+  call <SID>hi("CursorLineNr",  s:gui03, s:gui01, s:cterm03, s:cterm01, "")
+  call <SID>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none")
+  call <SID>hi("PMenuSel",      s:gui04, s:gui01, s:cterm04, s:cterm01, "reverse")
+  call <SID>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
+  call <SID>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
+  call <SID>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none")
+else
+  call <SID>hi("Cursor",        s:gui00, s:gui02, s:cterm00, s:cterm02, "")
+  call <SID>hi("NonText",       s:gui05, "", s:cterm05, "", "")
+  call <SID>hi("Normal",        s:gui02, s:gui07, s:cterm02, s:cterm05, "")
+  call <SID>hi("LineNr",        s:gui04, s:gui06, s:cterm04, s:cterm06, "")
+  call <SID>hi("SignColumn",    s:gui04, s:gui06, s:cterm04, s:cterm06, "")
+  call <SID>hi("SpecialKey",    s:gui05, "", s:cterm05, "", "")
+  call <SID>hi("StatusLine",    s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
+  call <SID>hi("StatusLineNC",  s:gui04, s:gui06, s:cterm04, s:cterm06, "none")
+  call <SID>hi("VertSplit",     s:gui05, s:gui05, s:cterm05, s:cterm05, "none")
+  call <SID>hi("ColorColumn",   "", s:gui06, "", s:cterm06, "none")
+  call <SID>hi("CursorColumn",  "", s:gui06, "", s:cterm06, "none")
+  call <SID>hi("CursorLine",    "", s:gui06, "", s:cterm06, "none")
+  call <SID>hi("CursorLineNr",  s:gui04, s:gui06, s:cterm04, s:cterm06, "")
+  call <SID>hi("PMenu",         s:gui05, s:gui03, s:cterm05, s:cterm03, "none")
+  call <SID>hi("PMenuSel",      s:gui05, s:gui03, s:cterm05, s:cterm03, "reverse")
+  call <SID>hi("TabLine",       s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
+  call <SID>hi("TabLineFill",   s:gui06, s:gui01, s:cterm06, s:cterm01, "reverse")
+  call <SID>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "reverse")
+endif
 
 " Standard Syntax Highlighting
 call <SID>hi("Boolean",      s:gui09, "", s:cterm09, "", "")
@@ -201,10 +165,10 @@ call <SID>hi("Type",         s:gui09, "", s:cterm09, "", "none")
 call <SID>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "")
 
 " Spelling Highlighting
-call <SID>hi("SpellBad",     "", "NONE", "", "NONE", "undercurl")
-call <SID>hi("SpellLocal",   "", "NONE", "", "NONE", "undercurl")
-call <SID>hi("SpellCap",     "", "NONE", "", "NONE", "undercurl")
-call <SID>hi("SpellRare",    "", "NONE", "", "NONE", "undercurl")
+call <SID>hi("SpellBad",     "", s:gui00, "", s:cterm08, "")
+call <SID>hi("SpellLocal",   "", s:gui00, "", s:cterm0D, "")
+"call <SID>hi("SpellCap",    s:gui00, s:gui08, s:cterm00, s:cterm08, "")
+"call <SID>hi("SpellRare",   s:gui00, s:gui08, s:cterm00, s:cterm08, "")
 
 " Additional Diff Highlighting
 call <SID>hi("DiffAdd",      s:gui0B, s:gui00, s:cterm0B, s:cterm00, "")
@@ -264,9 +228,15 @@ call <SID>hi("gitCommitOverflow",  s:gui08, "", s:cterm08, "", "")
 call <SID>hi("gitCommitSummary",   s:gui0B, "", s:cterm0B, "", "")
   
 " GitGutter Highlighting
-call <SID>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "")
-call <SID>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "")
-call <SID>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "")
+if &background == "dark"
+  call <SID>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "")
+  call <SID>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "")
+  call <SID>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "")
+else
+  call <SID>hi("GitGutterAdd",     s:gui0B, s:gui06, s:cterm0B, s:cterm06, "")
+  call <SID>hi("GitGutterChange",  s:gui0D, s:gui06, s:cterm0D, s:cterm06, "")
+  call <SID>hi("GitGutterDelete",  s:gui08, s:gui06, s:cterm08, s:cterm06, "")
+endif
 
 
 " GitGutter Highlighting
