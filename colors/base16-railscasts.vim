@@ -54,23 +54,24 @@ let g:colors_name = "base16-railscasts"
 " Highlighting function
 fun! <SID>hi(group, guifg, guibg, ctermfg, ctermbg, attr)
   if a:guifg != ""
-    exec "hi " . a:group . " guifg=#" . s:DarkOrLightGui(a:guifg)
+    exec "hi " . a:group . " guifg=#" . s:gui(a:guifg)
   endif
   if a:guibg != ""
-    exec "hi " . a:group . " guibg=#" . s:DarkOrLightGui(a:guibg)
+    exec "hi " . a:group . " guibg=#" . s:gui(a:guibg)
   endif
   if a:ctermfg != ""
-    exec "hi " . a:group . " ctermfg=" . s:DarkOrLightCterm(a:ctermfg)
+    exec "hi " . a:group . " ctermfg=" . s:cterm(a:ctermfg)
   endif
   if a:ctermbg != ""
-    exec "hi " . a:group . " ctermbg=" . s:DarkOrLightCterm(a:ctermbg)
+    exec "hi " . a:group . " ctermbg=" . s:cterm(a:ctermbg)
   endif
   if a:attr != ""
     exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
   endif
 endfun
 
-fun s:DarkOrLightGui(color)
+" Return GUI color for light/dark variants
+fun! s:gui(color)
   if &background == "dark"
     return a:color
   endif
@@ -98,7 +99,8 @@ fun s:DarkOrLightGui(color)
   return a:color
 endfun
 
-fun s:DarkOrLightCterm(color)
+" Return terminal color for light/dark variants
+fun! s:cterm(color)
   if &background == "dark"
     return a:color
   endif
@@ -201,10 +203,10 @@ call <SID>hi("Type",         s:gui09, "", s:cterm09, "", "none")
 call <SID>hi("Typedef",      s:gui0A, "", s:cterm0A, "", "")
 
 " Spelling Highlighting
-call <SID>hi("SpellBad",     "", "NONE", "", "NONE", "undercurl")
-call <SID>hi("SpellLocal",   "", "NONE", "", "NONE", "undercurl")
-call <SID>hi("SpellCap",     "", "NONE", "", "NONE", "undercurl")
-call <SID>hi("SpellRare",    "", "NONE", "", "NONE", "undercurl")
+call <SID>hi("SpellBad",     "", s:gui00, "", s:cterm00, "undercurl")
+call <SID>hi("SpellLocal",   "", s:gui00, "", s:cterm00, "undercurl")
+call <SID>hi("SpellCap",     "", s:gui00, "", s:cterm00, "undercurl")
+call <SID>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl")
 
 " Additional Diff Highlighting
 call <SID>hi("DiffAdd",      s:gui0B, s:gui00, s:cterm0B, s:cterm00, "")
