@@ -1,23 +1,23 @@
-" Base16 Tomorrow (https://github.com/chriskempson/base16)
-" Scheme: Chris Kempson (http://chriskempson.com)
+" Base16 shapeshifter (https://github.com/chriskempson/base16)
+" Scheme: Tyler Benziger (http://tybenz.com)
 
 " GUI color definitions
-let s:gui00 = "1d1f21"
-let s:gui01 = "282a2e"
-let s:gui02 = "373b41"
-let s:gui03 = "969896"
-let s:gui04 = "b4b7b4"
-let s:gui05 = "c5c8c6"
+let s:gui00 = "000000"
+let s:gui01 = "040404"
+let s:gui02 = "102015"
+let s:gui03 = "343434"
+let s:gui04 = "555555"
+let s:gui05 = "ababab"
 let s:gui06 = "e0e0e0"
-let s:gui07 = "ffffff"
-let s:gui08 = "cc6666"
-let s:gui09 = "de935f"
-let s:gui0A = "f0c674"
-let s:gui0B = "b5bd68"
-let s:gui0C = "8abeb7"
-let s:gui0D = "81a2be"
-let s:gui0E = "b294bb"
-let s:gui0F = "a3685a"
+let s:gui07 = "f9f9f9"
+let s:gui08 = "e92f2f"
+let s:gui09 = "e09448"
+let s:gui0A = "dddd13"
+let s:gui0B = "0ed839"
+let s:gui0C = "23edda"
+let s:gui0D = "3b48e3"
+let s:gui0E = "f996e2"
+let s:gui0F = "69542d"
 
 " Terminal color definitions
 let s:cterm00 = "Black"
@@ -49,7 +49,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-tomorrow"
+let g:colors_name = "base16-shapeshifter"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr)

@@ -20,16 +20,16 @@ let s:gui0E = "00bb00"
 let s:gui0F = "005500"
 
 " Terminal color definitions
-let s:cterm00 = "00"
-let s:cterm03 = "08"
-let s:cterm05 = "07"
-let s:cterm07 = "15"
-let s:cterm08 = "01"
-let s:cterm0A = "03"
-let s:cterm0B = "02"
-let s:cterm0C = "06"
-let s:cterm0D = "04"
-let s:cterm0E = "05"
+let s:cterm00 = "Black"
+let s:cterm03 = "DarkGray"
+let s:cterm05 = "Gray"
+let s:cterm07 = "White"
+let s:cterm08 = "DarkRed"
+let s:cterm0A = "Brown"
+let s:cterm0B = "DarkGreen"
+let s:cterm0C = "DarkCyan"
+let s:cterm0D = "DarkBlue"
+let s:cterm0E = "DarkMagenta"
 if exists('base16colorspace') && base16colorspace == "256"
   let s:cterm01 = "18"
   let s:cterm02 = "19"
@@ -38,12 +38,12 @@ if exists('base16colorspace') && base16colorspace == "256"
   let s:cterm09 = "16"
   let s:cterm0F = "17"
 else
-  let s:cterm01 = "10"
-  let s:cterm02 = "11"
-  let s:cterm04 = "12"
-  let s:cterm06 = "13"
-  let s:cterm09 = "09"
-  let s:cterm0F = "14"
+  let s:cterm01 = "Green"
+  let s:cterm02 = "Yellow"
+  let s:cterm04 = "Blue"
+  let s:cterm06 = "Magenta"
+  let s:cterm09 = "Red"
+  let s:cterm0F = "Cyan"
 endif
 
 " Theme setup
@@ -88,8 +88,6 @@ fun s:gui(color)
     return s:gui03
   elseif a:color == s:gui05
     return s:gui02
-  elseif a:color == s:gui05
-    return s:gui02
   elseif a:color == s:gui06
     return s:gui01
   elseif a:color == s:gui07
@@ -117,8 +115,6 @@ fun s:cterm(color)
     return s:cterm03
   elseif a:color == s:cterm05
     return s:cterm02
-  elseif a:color == s:cterm05
-    return s:cterm02
   elseif a:color == s:cterm06
     return s:cterm01
   elseif a:color == s:cterm07
@@ -136,14 +132,14 @@ call <sid>hi("ErrorMsg",      s:gui08, s:gui00, s:cterm08, s:cterm00, "")
 call <sid>hi("Exception",     s:gui08, "", s:cterm08, "", "")
 call <sid>hi("FoldColumn",    "", s:gui01, "", s:cterm01, "")
 call <sid>hi("Folded",        s:gui03, s:gui01, s:cterm03, s:cterm01, "")
-call <sid>hi("IncSearch",     s:gui0A, "", s:cterm0A, "", "")
+call <sid>hi("IncSearch",     s:gui01, s:gui0A, s:cterm01, s:cterm0A, "none")
 call <sid>hi("Italic",        "", "", "", "", "none")
 call <sid>hi("Macro",         s:gui08, "", s:cterm08, "", "")
-call <sid>hi("MatchParen",    s:gui03, s:gui00, s:cterm03, s:cterm00,  "reverse")
+call <sid>hi("MatchParen",    s:gui00, s:gui03, s:cterm00, s:cterm03,  "")
 call <sid>hi("ModeMsg",       s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("MoreMsg",       s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("Question",      s:gui0A, "", s:cterm0A, "", "")
-call <sid>hi("Search",        s:gui0A, s:gui01, s:cterm0A, s:cterm01,  "reverse")
+call <sid>hi("Search",        s:gui01, s:gui0A, s:cterm01, s:cterm0A,  "")
 call <sid>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "")
 call <sid>hi("TooLong",       s:gui08, "", s:cterm08, "", "")
 call <sid>hi("Underlined",    s:gui08, "", s:cterm08, "", "")
@@ -167,7 +163,7 @@ call <sid>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none")
 call <sid>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none")
 call <sid>hi("CursorLineNr",  s:gui03, s:gui01, s:cterm03, s:cterm01, "")
 call <sid>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none")
-call <sid>hi("PMenuSel",      s:gui04, s:gui01, s:cterm04, s:cterm01, "reverse")
+call <sid>hi("PMenuSel",      s:gui01, s:gui04, s:cterm01, s:cterm04, "")
 call <sid>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 call <sid>hi("TabLineFill",   s:gui03, s:gui01, s:cterm03, s:cterm01, "none")
 call <sid>hi("TabLineSel",    s:gui0B, s:gui01, s:cterm0B, s:cterm01, "none")
@@ -268,6 +264,11 @@ call <sid>hi("gitCommitSummary",   s:gui0B, "", s:cterm0B, "", "")
 call <sid>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "")
 call <sid>hi("GitGutterChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "")
 call <sid>hi("GitGutterDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "")
+
+" Signify highlighting
+call <sid>hi("SignifySignAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "")
+call <sid>hi("SignifySignChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "")
+call <sid>hi("SignifySignDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "")
 
 
 " GitGutter highlighting
