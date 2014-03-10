@@ -17,11 +17,17 @@ To use the dark theme ensure `set background=dark` is present in your `~/.vimrc`
 Add `colorscheme base16-default` to your `~/.vimrc`.
 
 ### Vundle
-Add the following to your `~/.vimrc` file.
+Add the following to your `~/.vimrc` file and run `BundleInstall` in Vim.
 
     Bundle 'chriskempson/base16-vim'
+    
+### Pathogen
+
+    cd ~/.vim/bundle
+    git clone https://github.com/chriskempson/base16-vim.git
 
 ### Manual
+
     cd ~/.vim/colors
     git clone git://github.com/chriskempson/base16-vim.git base16
     cp base16/colors/*.vim .
