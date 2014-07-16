@@ -17,9 +17,9 @@ To use the dark theme ensure `set background=dark` is present in your `~/.vimrc`
 Add `colorscheme base16-default` to your `~/.vimrc`.
 
 ### Vundle
-Add the following to your `~/.vimrc` file and run `BundleInstall` in Vim.
+Add the following to your `~/.vimrc` file and run `PluginInstall` in Vim.
 
-    Bundle 'chriskempson/base16-vim'
+    Plugin 'chriskempson/base16-vim'
     
 ### Pathogen
 
