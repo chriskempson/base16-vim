@@ -38,3 +38,6 @@ If using a Base16 terminal theme designed to keep the 16 ANSI colors intact (a "
     let base16colorspace=256  " Access colors present in 256 colorspace
 
 This will cause vim to access the colours in the modified 256 colorpsace. Please **do not** enable this simply because you have a 256 color terminal as this will cause colors to be displayed incorrectly. 
+
+## Troubleshooting
+There is a script to help troubleshoot colour issues caled `colourtest` available in the https://github.com/chriskempson/base16-shell repository.
