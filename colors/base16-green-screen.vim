@@ -1,6 +1,6 @@
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Ocean scheme by Chris Kempson (http://chriskempson.com)
+" Green Screen scheme by Chris Kempson (http://chriskempson.com)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -8,27 +8,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-ocean.".&background.".sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-green-screen.".&background.".sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "2b303b"
-let s:gui01 = "343d46"
-let s:gui02 = "4f5b66"
-let s:gui03 = "65737e"
-let s:gui04 = "a7adba"
-let s:gui05 = "c0c5ce"
-let s:gui06 = "dfe1e8"
-let s:gui07 = "eff1f5"
-let s:gui08 = "bf616a"
-let s:gui09 = "d08770"
-let s:gui0A = "ebcb8b"
-let s:gui0B = "a3be8c"
-let s:gui0C = "96b5b4"
-let s:gui0D = "8fa1b3"
-let s:gui0E = "b48ead"
-let s:gui0F = "ab7967"
+let s:gui00 = "001100"
+let s:gui01 = "003300"
+let s:gui02 = "005500"
+let s:gui03 = "007700"
+let s:gui04 = "009900"
+let s:gui05 = "00bb00"
+let s:gui06 = "00dd00"
+let s:gui07 = "00ff00"
+let s:gui08 = "007700"
+let s:gui09 = "009900"
+let s:gui0A = "007700"
+let s:gui0B = "00bb00"
+let s:gui0C = "005500"
+let s:gui0D = "009900"
+let s:gui0E = "00bb00"
+let s:gui0F = "005500"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -60,7 +60,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-ocean"
+let g:colors_name = "base16-green-screen"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
