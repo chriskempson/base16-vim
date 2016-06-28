@@ -1,6 +1,6 @@
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Default Light scheme by Chris Kempson (http://chriskempson.com)
+" Atelier Sulphurpool scheme by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -8,27 +8,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-default-light.".&background.".sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-atelier-sulphurpool.".&background.".sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "f8f8f8"
-let s:gui01 = "e8e8e8"
-let s:gui02 = "d8d8d8"
-let s:gui03 = "b8b8b8"
-let s:gui04 = "585858"
-let s:gui05 = "383838"
-let s:gui06 = "282828"
-let s:gui07 = "181818"
-let s:gui08 = "ab4642"
-let s:gui09 = "dc9656"
-let s:gui0A = "f7ca88"
-let s:gui0B = "a1b56c"
-let s:gui0C = "86c1b9"
-let s:gui0D = "7cafc2"
-let s:gui0E = "ba8baf"
-let s:gui0F = "a16946"
+let s:gui00 = "202746"
+let s:gui01 = "293256"
+let s:gui02 = "5e6687"
+let s:gui03 = "6b7394"
+let s:gui04 = "898ea4"
+let s:gui05 = "979db4"
+let s:gui06 = "dfe2f1"
+let s:gui07 = "f5f7ff"
+let s:gui08 = "c94922"
+let s:gui09 = "c76b29"
+let s:gui0A = "c08b30"
+let s:gui0B = "ac9739"
+let s:gui0C = "22a2c9"
+let s:gui0D = "3d8fd1"
+let s:gui0E = "6679cc"
+let s:gui0F = "9c637a"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -60,7 +60,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-default-light"
+let g:colors_name = "base16-atelier-sulphurpool"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)

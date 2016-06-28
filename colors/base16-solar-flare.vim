@@ -1,6 +1,6 @@
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Default Light scheme by Chris Kempson (http://chriskempson.com)
+" Solar Flare scheme by Chuck Harmston (https://chuck.harmston.ch)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -8,27 +8,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-default-light.".&background.".sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-solar-flare.".&background.".sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "f8f8f8"
-let s:gui01 = "e8e8e8"
-let s:gui02 = "d8d8d8"
-let s:gui03 = "b8b8b8"
-let s:gui04 = "585858"
-let s:gui05 = "383838"
-let s:gui06 = "282828"
-let s:gui07 = "181818"
-let s:gui08 = "ab4642"
-let s:gui09 = "dc9656"
-let s:gui0A = "f7ca88"
-let s:gui0B = "a1b56c"
-let s:gui0C = "86c1b9"
-let s:gui0D = "7cafc2"
-let s:gui0E = "ba8baf"
-let s:gui0F = "a16946"
+let s:gui00 = "18262F"
+let s:gui01 = "222E38"
+let s:gui02 = "586875"
+let s:gui03 = "667581"
+let s:gui04 = "85939E"
+let s:gui05 = "A6AFB8"
+let s:gui06 = "E8E9ED"
+let s:gui07 = "F5F7FA"
+let s:gui08 = "EF5253"
+let s:gui09 = "E66B2B"
+let s:gui0A = "E4B51C"
+let s:gui0B = "7CC844"
+let s:gui0C = "52CBB0"
+let s:gui0D = "33B5E1"
+let s:gui0E = "A363D5"
+let s:gui0F = "D73C9A"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -60,7 +60,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-default-light"
+let g:colors_name = "base16-solar-flare"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)

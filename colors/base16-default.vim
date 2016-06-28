@@ -1,6 +1,6 @@
-" base16-vim-default (https://github.com/chriskempson/base16-vim)
-" Template: Chris Kempson (http://chriskempson.com)
-" Scheme: Default by Chris Kempson (http://chriskempson.com)
+" base16-vim (https://github.com/chriskempson/base16-vim)
+" by Chris Kempson (http://chriskempson.com)
+" Default scheme by Chris Kempson (http://chriskempson.com)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -65,16 +65,16 @@ let g:colors_name = "base16-default"
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
   if a:guifg != ""
-    exec "hi " . a:group . " guifg=#" . s:gui(a:guifg)
+    exec "hi " . a:group . " guifg=#" . a:guifg
   endif
   if a:guibg != ""
-    exec "hi " . a:group . " guibg=#" . s:gui(a:guibg)
+    exec "hi " . a:group . " guibg=#" . a:guibg
   endif
   if a:ctermfg != ""
-    exec "hi " . a:group . " ctermfg=" . s:cterm(a:ctermfg)
+    exec "hi " . a:group . " ctermfg=" . a:ctermfg
   endif
   if a:ctermbg != ""
-    exec "hi " . a:group . " ctermbg=" . s:cterm(a:ctermbg)
+    exec "hi " . a:group . " ctermbg=" . a:ctermbg
   endif
   if a:attr != ""
     exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
@@ -82,60 +82,6 @@ fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
   if a:guisp != ""
     exec "hi " . a:group . " guisp=#" . a:guisp
   endif
-endfun
-
-" Return GUI color for light/dark variants
-fun s:gui(color)
-  if &background == "dark"
-    return a:color
-  endif
-
-  if a:color == s:gui00
-    return s:gui07
-  elseif a:color == s:gui01
-    return s:gui06
-  elseif a:color == s:gui02
-    return s:gui05
-  elseif a:color == s:gui03
-    return s:gui04
-  elseif a:color == s:gui04
-    return s:gui03
-  elseif a:color == s:gui05
-    return s:gui02
-  elseif a:color == s:gui06
-    return s:gui01
-  elseif a:color == s:gui07
-    return s:gui00
-  endif
-
-  return a:color
-endfun
-
-" Return terminal color for light/dark variants
-fun s:cterm(color)
-  if &background == "dark"
-    return a:color
-  endif
-
-  if a:color == s:cterm00
-    return s:cterm07
-  elseif a:color == s:cterm01
-    return s:cterm06
-  elseif a:color == s:cterm02
-    return s:cterm05
-  elseif a:color == s:cterm03
-    return s:cterm04
-  elseif a:color == s:cterm04
-    return s:cterm03
-  elseif a:color == s:cterm05
-    return s:cterm02
-  elseif a:color == s:cterm06
-    return s:cterm01
-  elseif a:color == s:cterm07
-    return s:cterm00
-  endif
-
-  return a:color
 endfun
 
 " Vim editor colors
@@ -319,8 +265,6 @@ call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
 
 " Remove functions
 delf <sid>hi
-delf <sid>gui
-delf <sid>cterm
 
 " Remove color variables
 unlet s:gui00 s:gui01 s:gui02 s:gui03  s:gui04  s:gui05  s:gui06  s:gui07  s:gui08  s:gui09 s:gui0A  s:gui0B  s:gui0C  s:gui0D  s:gui0E  s:gui0F
