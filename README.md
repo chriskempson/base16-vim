@@ -40,7 +40,7 @@ If using a Base16 terminal theme designed to keep the 16 ANSI colors intact (a "
 This will cause vim to access the colours in the modified 256 colorspace. Please **do not** enable this simply because you have a 256 color terminal as this will cause colors to be displayed incorrectly. 
 
 ## Troubleshooting
-There is a script to help troubleshoot colour issues caled `colortest` available in the [Base16 Shell](https://github.com/chriskempson/base16-shell) repository.
+There is a script to help troubleshoot colour issues called `colortest` available in the [Base16 Shell](https://github.com/chriskempson/base16-shell) repository.
 
 ### Green line numbers
 ![green line numbers screenshot](https://raw.github.com/chriskempson/base16-vim/master/without-base16colorspace-256-with-256-terminal-theme.png)
