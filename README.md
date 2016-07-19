@@ -12,7 +12,6 @@ For terminal Vim (non-gui) please ensure you are using a base16 terminal theme.
 * [iTerm2](https://github.com/chriskempson/base16-iterm2)
 
 ## Installation
-To use the dark theme ensure `set background=dark` is present in your `~/.vimrc` file. Otherwise Vim will use the light variation by default.
 
 Add `colorscheme base16-default-dark` to your `~/.vimrc`.
 
