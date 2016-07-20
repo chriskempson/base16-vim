@@ -8,7 +8,7 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-marrakesh.".&background.".sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-marrakesh.sh"
   endif
 endif
 
