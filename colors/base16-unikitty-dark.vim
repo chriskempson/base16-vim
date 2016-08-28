@@ -1,6 +1,6 @@
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Summerfruit scheme by Christopher Corley (http://cscorley.github.io/)
+" Unikitty Dark scheme by Josh W Lewis (@joshwlewis)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -8,27 +8,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-summerfruit.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-unikitty-dark.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "151515"
-let s:gui01 = "202020"
-let s:gui02 = "303030"
-let s:gui03 = "505050"
-let s:gui04 = "B0B0B0"
-let s:gui05 = "D0D0D0"
-let s:gui06 = "E0E0E0"
-let s:gui07 = "FFFFFF"
-let s:gui08 = "FF0086"
-let s:gui09 = "FD8900"
-let s:gui0A = "ABA800"
-let s:gui0B = "00C918"
-let s:gui0C = "1faaaa"
-let s:gui0D = "3777E6"
-let s:gui0E = "AD00A1"
-let s:gui0F = "cc6633"
+let s:gui00 = "2e2a31"
+let s:gui01 = "4a464d"
+let s:gui02 = "666369"
+let s:gui03 = "838085"
+let s:gui04 = "9f9da2"
+let s:gui05 = "bcbabe"
+let s:gui06 = "d8d7da"
+let s:gui07 = "f5f4f7"
+let s:gui08 = "d8137f"
+let s:gui09 = "d65407"
+let s:gui0A = "dc8a0e"
+let s:gui0B = "17ad98"
+let s:gui0C = "149bda"
+let s:gui0D = "796af5"
+let s:gui0E = "bb60ea"
+let s:gui0F = "c720ca"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -60,7 +60,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-summerfruit"
+let g:colors_name = "base16-unikitty-dark"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
