@@ -1,3 +1,5 @@
+" vi:syntax=vim
+
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
 " Flat scheme by Chris Kempson (http://chriskempson.com)
@@ -187,8 +189,21 @@ call <sid>hi("DiffLine",     s:gui0D, s:gui00,  s:cterm0D, s:cterm00, "", "")
 call <sid>hi("DiffRemoved",  s:gui08, s:gui00,  s:cterm08, s:cterm00, "", "")
 
 " Git highlighting
-call <sid>hi("gitCommitOverflow",  s:gui08, "", s:cterm08, "", "", "")
-call <sid>hi("gitCommitSummary",   s:gui0B, "", s:cterm0B, "", "", "")
+call <sid>hi("gitcommitOverflow",       s:gui08, "", s:cterm08, "", "", "")
+call <sid>hi("gitcommitSummary",        s:gui0B, "", s:cterm0B, "", "", "")
+call <sid>hi("gitcommitComment",        s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("gitcommitUntracked",      s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("gitcommitDiscarded",      s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("gitcommitSelected",       s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("gitcommitHeader",         s:gui0E, "", s:cterm0E, "", "", "")
+call <sid>hi("gitcommitSelectedType",   s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("gitcommitUnmergedType",   s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("gitcommitDiscardedType",  s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("gitcommitBranch",         s:gui09, "", s:cterm09, "", "bold", "")
+call <sid>hi("gitcommitUntrackedFile",  s:gui0A, "", s:cterm0A, "", "", "")
+call <sid>hi("gitcommitUnmergedFile",   s:gui08, "", s:cterm08, "", "bold", "")
+call <sid>hi("gitcommitDiscardedFile",  s:gui08, "", s:cterm08, "", "bold", "")
+call <sid>hi("gitcommitSelectedFile",   s:gui0B, "", s:cterm0B, "", "bold", "")
 
 " GitGutter highlighting
 call <sid>hi("GitGutterAdd",     s:gui0B, s:gui01, s:cterm0B, s:cterm01, "", "")
