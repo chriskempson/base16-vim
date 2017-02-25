@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Seti UI scheme by 
+" Atelier Lakeside scheme by Bram de Haan (http://atelierbramdehaan.nl)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -10,27 +10,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-seti-ui.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-atelier-lakeside-light.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "151718"
-let s:gui01 = "8ec43d"
-let s:gui02 = "3B758C"
-let s:gui03 = "41535B"
-let s:gui04 = "43a5d5"
-let s:gui05 = "d6d6d6"
-let s:gui06 = "eeeeee"
-let s:gui07 = "ffffff"
-let s:gui08 = "Cd3f45"
-let s:gui09 = "db7b55"
-let s:gui0A = "e6cd69"
-let s:gui0B = "9fca56"
-let s:gui0C = "55dbbe"
-let s:gui0D = "55b5db"
-let s:gui0E = "a074c4"
-let s:gui0F = "8a553f"
+let s:gui00 = "ebf8ff"
+let s:gui01 = "c1e4f6"
+let s:gui02 = "7ea2b4"
+let s:gui03 = "7195a8"
+let s:gui04 = "5a7b8c"
+let s:gui05 = "516d7b"
+let s:gui06 = "1f292e"
+let s:gui07 = "161b1d"
+let s:gui08 = "d22d72"
+let s:gui09 = "935c25"
+let s:gui0A = "8a8a0f"
+let s:gui0B = "568c3b"
+let s:gui0C = "2d8f6f"
+let s:gui0D = "257fad"
+let s:gui0E = "6b6bb8"
+let s:gui0F = "b72dd2"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -62,7 +62,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-seti-ui"
+let g:colors_name = "base16-atelier-lakeside-light"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
@@ -223,6 +223,7 @@ call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "", "")
 " pangloss/vim-javascript highlighting
 call <sid>hi("jsOperator",          s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("jsStatement",         s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsReturn",            s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsThis",              s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("jsClassDefinition",   s:gui0A, "", s:cterm0A, "", "", "")

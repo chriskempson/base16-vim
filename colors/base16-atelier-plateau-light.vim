@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Green Screen scheme by Chris Kempson (http://chriskempson.com)
+" Atelier Plateau scheme by Bram de Haan (http://atelierbramdehaan.nl)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -10,27 +10,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-green-screen.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-atelier-plateau-light.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "001100"
-let s:gui01 = "003300"
-let s:gui02 = "005500"
-let s:gui03 = "007700"
-let s:gui04 = "009900"
-let s:gui05 = "00bb00"
-let s:gui06 = "00dd00"
-let s:gui07 = "00ff00"
-let s:gui08 = "007700"
-let s:gui09 = "009900"
-let s:gui0A = "007700"
-let s:gui0B = "00bb00"
-let s:gui0C = "005500"
-let s:gui0D = "009900"
-let s:gui0E = "00bb00"
-let s:gui0F = "005500"
+let s:gui00 = "f4ecec"
+let s:gui01 = "e7dfdf"
+let s:gui02 = "8a8585"
+let s:gui03 = "7e7777"
+let s:gui04 = "655d5d"
+let s:gui05 = "585050"
+let s:gui06 = "292424"
+let s:gui07 = "1b1818"
+let s:gui08 = "ca4949"
+let s:gui09 = "b45a3c"
+let s:gui0A = "a06e3b"
+let s:gui0B = "4b8b8b"
+let s:gui0C = "5485b6"
+let s:gui0D = "7272ca"
+let s:gui0E = "8464c4"
+let s:gui0F = "bd5187"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -62,7 +62,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-green-screen"
+let g:colors_name = "base16-atelier-plateau-light"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
@@ -223,6 +223,7 @@ call <sid>hi("javaScriptBraces",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("javaScriptNumber",  s:gui09, "", s:cterm09, "", "", "")
 " pangloss/vim-javascript highlighting
 call <sid>hi("jsOperator",          s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("jsStatement",         s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsReturn",            s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("jsThis",              s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("jsClassDefinition",   s:gui0A, "", s:cterm0A, "", "", "")
