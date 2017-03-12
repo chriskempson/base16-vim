@@ -19,7 +19,12 @@ Add `colorscheme base16-default-dark` to your `~/.vimrc`.
 Add the following to your `~/.vimrc` file and run `PluginInstall` in Vim.
 
     Plugin 'chriskempson/base16-vim'
-    
+
+### vim-plug
+Add the following to your `~/.vimrc` file and run `PlugInstall` in Vim.
+
+    Plug 'chriskempson/base16-vim'
+
 ### Pathogen
 
     cd ~/.vim/bundle
