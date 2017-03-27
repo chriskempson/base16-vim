@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Grayscale Dark scheme by Alexandre Gavioli (https://github.com/Alexx2/)
+" Rebecca scheme by Victor Borja (http://github.com/vic) based on Rebecca Theme (http://github.com/vic/rebecca-theme)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -10,27 +10,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-grayscale-dark.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-rebecca.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "101010"
-let s:gui01 = "252525"
-let s:gui02 = "464646"
-let s:gui03 = "525252"
-let s:gui04 = "ababab"
-let s:gui05 = "b9b9b9"
-let s:gui06 = "e3e3e3"
-let s:gui07 = "f7f7f7"
-let s:gui08 = "7c7c7c"
-let s:gui09 = "999999"
-let s:gui0A = "a0a0a0"
-let s:gui0B = "8e8e8e"
-let s:gui0C = "868686"
-let s:gui0D = "686868"
-let s:gui0E = "747474"
-let s:gui0F = "5e5e5e"
+let s:gui00 = "292a44"
+let s:gui01 = "663399"
+let s:gui02 = "383a62"
+let s:gui03 = "666699"
+let s:gui04 = "a0a0c5"
+let s:gui05 = "f1eff8"
+let s:gui06 = "ccccff"
+let s:gui07 = "53495d"
+let s:gui08 = "a0a0c5"
+let s:gui09 = "efe4a1"
+let s:gui0A = "ae81ff"
+let s:gui0B = "6dfedf"
+let s:gui0C = "8eaee0"
+let s:gui0D = "2de0a7"
+let s:gui0E = "7aa5ff"
+let s:gui0F = "ff79c6"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -61,22 +61,22 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#101010"
-  let g:terminal_color_1 =  "#7c7c7c"
-  let g:terminal_color_2 =  "#8e8e8e"
-  let g:terminal_color_3 =  "#a0a0a0"
-  let g:terminal_color_4 =  "#686868"
-  let g:terminal_color_5 =  "#747474"
-  let g:terminal_color_6 =  "#868686"
-  let g:terminal_color_7 =  "#b9b9b9"
-  let g:terminal_color_8 =  "#525252"
-  let g:terminal_color_9 =  "#999999"
-  let g:terminal_color_10 = "#252525"
-  let g:terminal_color_11 = "#464646"
-  let g:terminal_color_12 = "#ababab"
-  let g:terminal_color_13 = "#e3e3e3"
-  let g:terminal_color_14 = "#5e5e5e"
-  let g:terminal_color_15 = "#f7f7f7"
+  let g:terminal_color_0 =  "#292a44"
+  let g:terminal_color_1 =  "#a0a0c5"
+  let g:terminal_color_2 =  "#6dfedf"
+  let g:terminal_color_3 =  "#ae81ff"
+  let g:terminal_color_4 =  "#2de0a7"
+  let g:terminal_color_5 =  "#7aa5ff"
+  let g:terminal_color_6 =  "#8eaee0"
+  let g:terminal_color_7 =  "#f1eff8"
+  let g:terminal_color_8 =  "#666699"
+  let g:terminal_color_9 =  "#efe4a1"
+  let g:terminal_color_10 = "#663399"
+  let g:terminal_color_11 = "#383a62"
+  let g:terminal_color_12 = "#a0a0c5"
+  let g:terminal_color_13 = "#ccccff"
+  let g:terminal_color_14 = "#ff79c6"
+  let g:terminal_color_15 = "#53495d"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
   if &background == "light"
@@ -88,7 +88,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-grayscale-dark"
+let g:colors_name = "base16-rebecca"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)

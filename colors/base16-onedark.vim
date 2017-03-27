@@ -59,6 +59,32 @@ else
   let s:cterm0F = "14"
 endif
 
+" Neovim terminal colours
+if has("nvim")
+  let g:terminal_color_0 =  "#282c34"
+  let g:terminal_color_1 =  "#e06c75"
+  let g:terminal_color_2 =  "#98c379"
+  let g:terminal_color_3 =  "#e5c07b"
+  let g:terminal_color_4 =  "#61afef"
+  let g:terminal_color_5 =  "#c678dd"
+  let g:terminal_color_6 =  "#56b6c2"
+  let g:terminal_color_7 =  "#abb2bf"
+  let g:terminal_color_8 =  "#545862"
+  let g:terminal_color_9 =  "#d19a66"
+  let g:terminal_color_10 = "#353b45"
+  let g:terminal_color_11 = "#3e4451"
+  let g:terminal_color_12 = "#565c64"
+  let g:terminal_color_13 = "#b6bdca"
+  let g:terminal_color_14 = "#be5046"
+  let g:terminal_color_15 = "#c8ccd4"
+  let g:terminal_color_background = g:terminal_color_0
+  let g:terminal_color_foreground = g:terminal_color_7
+  if &background == "light"
+    let g:terminal_color_background = g:terminal_color_7
+    let g:terminal_color_foreground = g:terminal_color_2
+  endif
+endif
+
 " Theme setup
 hi clear
 syntax reset
