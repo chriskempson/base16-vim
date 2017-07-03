@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Atelier Lakeside Light scheme by Bram de Haan (http://atelierbramdehaan.nl)
+" Harmonic16 Light scheme by Jannik Siebert (https://github.com/janniks)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -10,27 +10,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-atelier-lakeside-light.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-harmonic16-light.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "ebf8ff"
-let s:gui01 = "c1e4f6"
-let s:gui02 = "7ea2b4"
-let s:gui03 = "7195a8"
-let s:gui04 = "5a7b8c"
-let s:gui05 = "516d7b"
-let s:gui06 = "1f292e"
-let s:gui07 = "161b1d"
-let s:gui08 = "d22d72"
-let s:gui09 = "935c25"
-let s:gui0A = "8a8a0f"
-let s:gui0B = "568c3b"
-let s:gui0C = "2d8f6f"
-let s:gui0D = "257fad"
-let s:gui0E = "6b6bb8"
-let s:gui0F = "b72dd2"
+let s:gui00 = "f7f9fb"
+let s:gui01 = "e5ebf1"
+let s:gui02 = "cbd6e2"
+let s:gui03 = "aabcce"
+let s:gui04 = "627e99"
+let s:gui05 = "405c79"
+let s:gui06 = "223b54"
+let s:gui07 = "0b1c2c"
+let s:gui08 = "bf8b56"
+let s:gui09 = "bfbf56"
+let s:gui0A = "8bbf56"
+let s:gui0B = "56bf8b"
+let s:gui0C = "568bbf"
+let s:gui0D = "8b56bf"
+let s:gui0E = "bf568b"
+let s:gui0F = "bf5656"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -61,22 +61,22 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#ebf8ff"
-  let g:terminal_color_1 =  "#d22d72"
-  let g:terminal_color_2 =  "#568c3b"
-  let g:terminal_color_3 =  "#8a8a0f"
-  let g:terminal_color_4 =  "#257fad"
-  let g:terminal_color_5 =  "#6b6bb8"
-  let g:terminal_color_6 =  "#2d8f6f"
-  let g:terminal_color_7 =  "#516d7b"
-  let g:terminal_color_8 =  "#7195a8"
-  let g:terminal_color_9 =  "#935c25"
-  let g:terminal_color_10 = "#c1e4f6"
-  let g:terminal_color_11 = "#7ea2b4"
-  let g:terminal_color_12 = "#5a7b8c"
-  let g:terminal_color_13 = "#1f292e"
-  let g:terminal_color_14 = "#b72dd2"
-  let g:terminal_color_15 = "#161b1d"
+  let g:terminal_color_0 =  "#f7f9fb"
+  let g:terminal_color_1 =  "#bf8b56"
+  let g:terminal_color_2 =  "#56bf8b"
+  let g:terminal_color_3 =  "#8bbf56"
+  let g:terminal_color_4 =  "#8b56bf"
+  let g:terminal_color_5 =  "#bf568b"
+  let g:terminal_color_6 =  "#568bbf"
+  let g:terminal_color_7 =  "#405c79"
+  let g:terminal_color_8 =  "#aabcce"
+  let g:terminal_color_9 =  "#bfbf56"
+  let g:terminal_color_10 = "#e5ebf1"
+  let g:terminal_color_11 = "#cbd6e2"
+  let g:terminal_color_12 = "#627e99"
+  let g:terminal_color_13 = "#223b54"
+  let g:terminal_color_14 = "#bf5656"
+  let g:terminal_color_15 = "#0b1c2c"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
   if &background == "light"
@@ -88,7 +88,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-atelier-lakeside-light"
+let g:colors_name = "base16-harmonic16-light"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)

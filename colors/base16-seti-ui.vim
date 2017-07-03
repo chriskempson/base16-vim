@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Solar Flare scheme by Chuck Harmston (https://chuck.harmston.ch)
+" Seti UI scheme by 
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -10,27 +10,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-solarflare.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-seti-ui.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "18262F"
-let s:gui01 = "222E38"
-let s:gui02 = "586875"
-let s:gui03 = "667581"
-let s:gui04 = "85939E"
-let s:gui05 = "A6AFB8"
-let s:gui06 = "E8E9ED"
-let s:gui07 = "F5F7FA"
-let s:gui08 = "EF5253"
-let s:gui09 = "E66B2B"
-let s:gui0A = "E4B51C"
-let s:gui0B = "7CC844"
-let s:gui0C = "52CBB0"
-let s:gui0D = "33B5E1"
-let s:gui0E = "A363D5"
-let s:gui0F = "D73C9A"
+let s:gui00 = "151718"
+let s:gui01 = "8ec43d"
+let s:gui02 = "3B758C"
+let s:gui03 = "41535B"
+let s:gui04 = "43a5d5"
+let s:gui05 = "d6d6d6"
+let s:gui06 = "eeeeee"
+let s:gui07 = "ffffff"
+let s:gui08 = "Cd3f45"
+let s:gui09 = "db7b55"
+let s:gui0A = "e6cd69"
+let s:gui0B = "9fca56"
+let s:gui0C = "55dbbe"
+let s:gui0D = "55b5db"
+let s:gui0E = "a074c4"
+let s:gui0F = "8a553f"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -61,22 +61,22 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#18262F"
-  let g:terminal_color_1 =  "#EF5253"
-  let g:terminal_color_2 =  "#7CC844"
-  let g:terminal_color_3 =  "#E4B51C"
-  let g:terminal_color_4 =  "#33B5E1"
-  let g:terminal_color_5 =  "#A363D5"
-  let g:terminal_color_6 =  "#52CBB0"
-  let g:terminal_color_7 =  "#A6AFB8"
-  let g:terminal_color_8 =  "#667581"
-  let g:terminal_color_9 =  "#E66B2B"
-  let g:terminal_color_10 = "#222E38"
-  let g:terminal_color_11 = "#586875"
-  let g:terminal_color_12 = "#85939E"
-  let g:terminal_color_13 = "#E8E9ED"
-  let g:terminal_color_14 = "#D73C9A"
-  let g:terminal_color_15 = "#F5F7FA"
+  let g:terminal_color_0 =  "#151718"
+  let g:terminal_color_1 =  "#Cd3f45"
+  let g:terminal_color_2 =  "#9fca56"
+  let g:terminal_color_3 =  "#e6cd69"
+  let g:terminal_color_4 =  "#55b5db"
+  let g:terminal_color_5 =  "#a074c4"
+  let g:terminal_color_6 =  "#55dbbe"
+  let g:terminal_color_7 =  "#d6d6d6"
+  let g:terminal_color_8 =  "#41535B"
+  let g:terminal_color_9 =  "#db7b55"
+  let g:terminal_color_10 = "#8ec43d"
+  let g:terminal_color_11 = "#3B758C"
+  let g:terminal_color_12 = "#43a5d5"
+  let g:terminal_color_13 = "#eeeeee"
+  let g:terminal_color_14 = "#8a553f"
+  let g:terminal_color_15 = "#ffffff"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
   if &background == "light"
@@ -88,7 +88,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-solarflare"
+let g:colors_name = "base16-seti-ui"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
@@ -113,6 +113,7 @@ fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
 endfun
 
 " Vim editor colors
+call <sid>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "", "")
 call <sid>hi("Bold",          "", "", "", "", "bold", "")
 call <sid>hi("Debug",         s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("Directory",     s:gui0D, "", s:cterm0D, "", "", "")
@@ -140,7 +141,6 @@ call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "none", "")
 call <sid>hi("Conceal",       s:gui0D, s:gui00, s:cterm0D, s:cterm00, "", "")
 call <sid>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "", "")
 call <sid>hi("NonText",       s:gui03, "", s:cterm03, "", "", "")
-call <sid>hi("Normal",        s:gui05, s:gui00, s:cterm05, s:cterm00, "", "")
 call <sid>hi("LineNr",        s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
 call <sid>hi("SignColumn",    s:gui03, s:gui01, s:cterm03, s:cterm01, "", "")
 call <sid>hi("StatusLine",    s:gui04, s:gui02, s:cterm04, s:cterm02, "none", "")
@@ -150,6 +150,7 @@ call <sid>hi("ColorColumn",   "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("CursorColumn",  "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("CursorLine",    "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("CursorLineNr",  s:gui04, s:gui01, s:cterm04, s:cterm01, "", "")
+call <sid>hi("QuickFixLine",  "", s:gui01, "", s:cterm01, "none", "")
 call <sid>hi("PMenu",         s:gui04, s:gui01, s:cterm04, s:cterm01, "none", "")
 call <sid>hi("PMenuSel",      s:gui01, s:gui04, s:cterm01, s:cterm04, "", "")
 call <sid>hi("TabLine",       s:gui03, s:gui01, s:cterm03, s:cterm01, "none", "")
@@ -292,6 +293,8 @@ call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "", "")
 " Python highlighting
 call <sid>hi("pythonOperator",  s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("pythonRepeat",    s:gui0E, "", s:cterm0E, "", "", "")
+call <sid>hi("pythonInclude",   s:gui0E, "", s:cterm0E, "", "", "")
+call <sid>hi("pythonStatement", s:gui0E, "", s:cterm0E, "", "", "")
 
 " Ruby highlighting
 call <sid>hi("rubyAttribute",               s:gui0D, "", s:cterm0D, "", "", "")
