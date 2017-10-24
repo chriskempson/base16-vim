@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Brush Trees scheme by Abraham White &lt;abelincoln.white@gmail.com&gt;
+" Harmonic16 Dark scheme by Jannik Siebert (https://github.com/janniks)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -10,27 +10,27 @@
 "   let g:base16_shell_path=base16-builder/output/shell/
 if !has('gui_running')
   if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-brush-trees.sh"
+    execute "silent !/bin/sh ".g:base16_shell_path."/base16-.sh"
   endif
 endif
 
 " GUI color definitions
-let s:gui00 = "E3EFEF"
-let s:gui01 = "C9DBDC"
-let s:gui02 = "B0C5C8"
-let s:gui03 = "98AFB5"
-let s:gui04 = "8299A1"
-let s:gui05 = "6D828E"
-let s:gui06 = "5A6D7A"
-let s:gui07 = "485867"
-let s:gui08 = "b38686"
-let s:gui09 = "d8bba2"
-let s:gui0A = "aab386"
-let s:gui0B = "87b386"
-let s:gui0C = "86b3b3"
-let s:gui0D = "868cb3"
-let s:gui0E = "b386b2"
-let s:gui0F = "b39f9f"
+let s:gui00 = "0b1c2c"
+let s:gui01 = "223b54"
+let s:gui02 = "405c79"
+let s:gui03 = "627e99"
+let s:gui04 = "aabcce"
+let s:gui05 = "cbd6e2"
+let s:gui06 = "e5ebf1"
+let s:gui07 = "f7f9fb"
+let s:gui08 = "bf8b56"
+let s:gui09 = "bfbf56"
+let s:gui0A = "8bbf56"
+let s:gui0B = "56bf8b"
+let s:gui0C = "568bbf"
+let s:gui0D = "8b56bf"
+let s:gui0E = "bf568b"
+let s:gui0F = "bf5656"
 
 " Terminal color definitions
 let s:cterm00 = "00"
@@ -61,22 +61,22 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#E3EFEF"
-  let g:terminal_color_1 =  "#b38686"
-  let g:terminal_color_2 =  "#87b386"
-  let g:terminal_color_3 =  "#aab386"
-  let g:terminal_color_4 =  "#868cb3"
-  let g:terminal_color_5 =  "#b386b2"
-  let g:terminal_color_6 =  "#86b3b3"
-  let g:terminal_color_7 =  "#6D828E"
-  let g:terminal_color_8 =  "#98AFB5"
-  let g:terminal_color_9 =  "#d8bba2"
-  let g:terminal_color_10 = "#C9DBDC"
-  let g:terminal_color_11 = "#B0C5C8"
-  let g:terminal_color_12 = "#8299A1"
-  let g:terminal_color_13 = "#5A6D7A"
-  let g:terminal_color_14 = "#b39f9f"
-  let g:terminal_color_15 = "#485867"
+  let g:terminal_color_0 =  "#0b1c2c"
+  let g:terminal_color_1 =  "#bf8b56"
+  let g:terminal_color_2 =  "#56bf8b"
+  let g:terminal_color_3 =  "#8bbf56"
+  let g:terminal_color_4 =  "#8b56bf"
+  let g:terminal_color_5 =  "#bf568b"
+  let g:terminal_color_6 =  "#568bbf"
+  let g:terminal_color_7 =  "#cbd6e2"
+  let g:terminal_color_8 =  "#627e99"
+  let g:terminal_color_9 =  "#bfbf56"
+  let g:terminal_color_10 = "#223b54"
+  let g:terminal_color_11 = "#405c79"
+  let g:terminal_color_12 = "#aabcce"
+  let g:terminal_color_13 = "#e5ebf1"
+  let g:terminal_color_14 = "#bf5656"
+  let g:terminal_color_15 = "#f7f9fb"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
   if &background == "light"
@@ -88,7 +88,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-brush-trees"
+let g:colors_name = "base16-"
 
 " Highlighting function
 fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
