@@ -55,3 +55,17 @@ If your Vim looks like the above image you are using a 256 terminal theme withou
 ![blue line numbers screenshot](https://raw.github.com/chriskempson/base16-vim/master/with-base16colorspace-256-without-base16-shell.png)
 
 If your Vim looks like the above image you are setting `let base16colorspace=256` in your `~/.vimrc` but either not running [Base16 Shell](https://github.com/chriskempson/base16-shell) or [Base16 Shell](https://github.com/chriskempson/base16-shell) is not working for your terminal. Either ensure [Base16 Shell](https://github.com/chriskempson/base16-shell) is working by running the `colortest` available in the [Base16 Shell](https://github.com/chriskempson/base16-shell) repository or not setting `let base16colorspace=256` in your `~/.vimrc`.
+
+## Customization
+If you want to do some local customization, you can add something like this to your `~/.vimrc`:
+
+```vim
+function! s:base16_customize() abort
+  call Base16hi("MatchParen", g:base16_gui05, g:base16_gui03, g:base16_cterm05, g:base16_cterm03, "bold,italic", "")
+endfunction
+
+augroup on_change_colorschema
+  autocmd!
+  autocmd ColorScheme * call s:base16_customize()
+augroup END
+```
