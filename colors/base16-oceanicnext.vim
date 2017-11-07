@@ -15,48 +15,86 @@ if !has('gui_running')
 endif
 
 " GUI color definitions
-let s:gui00 = "1B2B34"
-let s:gui01 = "343D46"
-let s:gui02 = "4F5B66"
-let s:gui03 = "65737E"
-let s:gui04 = "A7ADBA"
-let s:gui05 = "C0C5CE"
-let s:gui06 = "CDD3DE"
-let s:gui07 = "D8DEE9"
-let s:gui08 = "EC5f67"
-let s:gui09 = "F99157"
-let s:gui0A = "FAC863"
-let s:gui0B = "99C794"
-let s:gui0C = "5FB3B3"
-let s:gui0D = "6699CC"
-let s:gui0E = "C594C5"
-let s:gui0F = "AB7967"
+let s:gui00        = "1B2B34"
+let g:base16_gui00 = "1B2B34"
+let s:gui01        = "343D46"
+let g:base16_gui01 = "343D46"
+let s:gui02        = "4F5B66"
+let g:base16_gui02 = "4F5B66"
+let s:gui03        = "65737E"
+let g:base16_gui03 = "65737E"
+let s:gui04        = "A7ADBA"
+let g:base16_gui04 = "A7ADBA"
+let s:gui05        = "C0C5CE"
+let g:base16_gui05 = "C0C5CE"
+let s:gui06        = "CDD3DE"
+let g:base16_gui06 = "CDD3DE"
+let s:gui07        = "D8DEE9"
+let g:base16_gui07 = "D8DEE9"
+let s:gui08        = "EC5f67"
+let g:base16_gui08 = "EC5f67"
+let s:gui09        = "F99157"
+let g:base16_gui09 = "F99157"
+let s:gui0A        = "FAC863"
+let g:base16_gui0A = "FAC863"
+let s:gui0B        = "99C794"
+let g:base16_gui0B = "99C794"
+let s:gui0C        = "5FB3B3"
+let g:base16_gui0C = "5FB3B3"
+let s:gui0D        = "6699CC"
+let g:base16_gui0D = "6699CC"
+let s:gui0E        = "C594C5"
+let g:base16_gui0E = "C594C5"
+let s:gui0F        = "AB7967"
+let g:base16_gui0F = "AB7967"
 
 " Terminal color definitions
-let s:cterm00 = "00"
-let s:cterm03 = "08"
-let s:cterm05 = "07"
-let s:cterm07 = "15"
-let s:cterm08 = "01"
-let s:cterm0A = "03"
-let s:cterm0B = "02"
-let s:cterm0C = "06"
-let s:cterm0D = "04"
-let s:cterm0E = "05"
+let s:cterm00        = "00"
+let g:base16_cterm00 = "00"
+let s:cterm03        = "08"
+let g:base16_cterm03 = "08"
+let s:cterm05        = "07"
+let g:base16_cterm05 = "07"
+let s:cterm07        = "15"
+let g:base16_cterm07 = "15"
+let s:cterm08        = "01"
+let g:base16_cterm08 = "01"
+let s:cterm0A        = "03"
+let g:base16_cterm0A = "03"
+let s:cterm0B        = "02"
+let g:base16_cterm0B = "02"
+let s:cterm0C        = "06"
+let g:base16_cterm0C = "06"
+let s:cterm0D        = "04"
+let g:base16_cterm0D = "04"
+let s:cterm0E        = "05"
+let g:base16_cterm0E = "05"
 if exists('base16colorspace') && base16colorspace == "256"
-  let s:cterm01 = "18"
-  let s:cterm02 = "19"
-  let s:cterm04 = "20"
-  let s:cterm06 = "21"
-  let s:cterm09 = "16"
-  let s:cterm0F = "17"
+  let s:cterm01        = "18"
+  let g:base16_cterm01 = "18"
+  let s:cterm02        = "19"
+  let g:base16_cterm02 = "19"
+  let s:cterm04        = "20"
+  let g:base16_cterm04 = "20"
+  let s:cterm06        = "21"
+  let g:base16_cterm06 = "21"
+  let s:cterm09        = "16"
+  let g:base16_cterm09 = "16"
+  let s:cterm0F        = "17"
+  let g:base16_cterm0F = "17"
 else
-  let s:cterm01 = "10"
-  let s:cterm02 = "11"
-  let s:cterm04 = "12"
-  let s:cterm06 = "13"
-  let s:cterm09 = "09"
-  let s:cterm0F = "14"
+  let s:cterm01        = "10"
+  let g:base16_cterm01 = "10"
+  let s:cterm02        = "11"
+  let g:base16_cterm02 = "11"
+  let s:cterm04        = "12"
+  let g:base16_cterm04 = "12"
+  let s:cterm06        = "13"
+  let g:base16_cterm06 = "13"
+  let s:cterm09        = "09"
+  let g:base16_cterm09 = "09"
+  let s:cterm0F        = "14"
+  let g:base16_cterm0F = "14"
 endif
 
 " Neovim terminal colours
@@ -70,15 +108,15 @@ if has("nvim")
   let g:terminal_color_6 =  "#5FB3B3"
   let g:terminal_color_7 =  "#C0C5CE"
   let g:terminal_color_8 =  "#65737E"
-  let g:terminal_color_9 =  "#F99157"
-  let g:terminal_color_10 = "#343D46"
-  let g:terminal_color_11 = "#4F5B66"
-  let g:terminal_color_12 = "#A7ADBA"
-  let g:terminal_color_13 = "#CDD3DE"
-  let g:terminal_color_14 = "#AB7967"
+  let g:terminal_color_9 =  "#EC5f67"
+  let g:terminal_color_10 = "#99C794"
+  let g:terminal_color_11 = "#FAC863"
+  let g:terminal_color_12 = "#6699CC"
+  let g:terminal_color_13 = "#C594C5"
+  let g:terminal_color_14 = "#5FB3B3"
   let g:terminal_color_15 = "#D8DEE9"
   let g:terminal_color_background = g:terminal_color_0
-  let g:terminal_color_foreground = g:terminal_color_7
+  let g:terminal_color_foreground = g:terminal_color_5
   if &background == "light"
     let g:terminal_color_background = g:terminal_color_7
     let g:terminal_color_foreground = g:terminal_color_2
@@ -91,7 +129,7 @@ syntax reset
 let g:colors_name = "base16-oceanicnext"
 
 " Highlighting function
-fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
+function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
   if a:guifg != ""
     exec "hi " . a:group . " guifg=#" . a:guifg
   endif
@@ -110,6 +148,11 @@ fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
   if a:guisp != ""
     exec "hi " . a:group . " guisp=#" . a:guisp
   endif
+endfunction
+
+
+fun <sid>hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
+  call Base16hi(a:group, a:guifg, a:guibg, a:ctermfg, a:ctermbg, a:attr, a:guisp)
 endfun
 
 " Vim editor colors
@@ -130,6 +173,7 @@ call <sid>hi("ModeMsg",       s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("MoreMsg",       s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("Question",      s:gui0D, "", s:cterm0D, "", "", "")
 call <sid>hi("Search",        s:gui03, s:gui0A, s:cterm03, s:cterm0A,  "", "")
+call <sid>hi("Substitute",    s:gui03, s:gui0A, s:cterm03, s:cterm0A, "none", "")
 call <sid>hi("SpecialKey",    s:gui03, "", s:cterm03, "", "", "")
 call <sid>hi("TooLong",       s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("Underlined",    s:gui08, "", s:cterm08, "", "", "")
@@ -321,6 +365,18 @@ call <sid>hi("SpellBad",     "", s:gui00, "", s:cterm00, "undercurl", s:gui08)
 call <sid>hi("SpellLocal",   "", s:gui00, "", s:cterm00, "undercurl", s:gui0C)
 call <sid>hi("SpellCap",     "", s:gui00, "", s:cterm00, "undercurl", s:gui0D)
 call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
+
+" Startify highlighting
+call <sid>hi("StartifyBracket",  s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("StartifyFile",     s:gui07, "", s:cterm07, "", "", "")
+call <sid>hi("StartifyFooter",   s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("StartifyHeader",   s:gui0B, "", s:cterm0B, "", "", "")
+call <sid>hi("StartifyNumber",   s:gui09, "", s:cterm09, "", "", "")
+call <sid>hi("StartifyPath",     s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("StartifySection",  s:gui0E, "", s:cterm0E, "", "", "")
+call <sid>hi("StartifySelect",   s:gui0C, "", s:cterm0C, "", "", "")
+call <sid>hi("StartifySlash",    s:gui03, "", s:cterm03, "", "", "")
+call <sid>hi("StartifySpecial",  s:gui03, "", s:cterm03, "", "", "")
 
 " Remove functions
 delf <sid>hi
