@@ -46,6 +46,15 @@ This will cause vim to access the colours in the modified 256 colorspace. Please
 ## Troubleshooting
 There is a script to help troubleshoot colour issues called `colortest` available in the [Base16 Shell](https://github.com/chriskempson/base16-shell) repository.
 
+If you are using a ISO-8613-3 compatible terminal (
+[vim docs](https://github.com/vim/vim/blob/23c1b2b018c8121ca5fcc247e37966428bf8ca66/runtime/doc/options.txt#L7876),
+[neovim docs](https://neovim.io/doc/user/options.html#'termguicolors')), and
+you see a green or blue line, try to enable `termguicolors`:
+
+```vim
+set termguicolors
+```
+
 ### Green line numbers
 ![green line numbers screenshot](https://raw.github.com/chriskempson/base16-vim/master/without-base16colorspace-256-with-256-terminal-theme.png)
 
