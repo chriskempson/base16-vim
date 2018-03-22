@@ -2,7 +2,7 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" Codeschool scheme by brettof86
+" Codeschool scheme by blockloop
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
@@ -361,10 +361,10 @@ call <sid>hi("SignifySignChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "
 call <sid>hi("SignifySignDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "", "")
 
 " Spelling highlighting
-call <sid>hi("SpellBad",     "", s:gui00, "", s:cterm00, "undercurl", s:gui08)
-call <sid>hi("SpellLocal",   "", s:gui00, "", s:cterm00, "undercurl", s:gui0C)
-call <sid>hi("SpellCap",     "", s:gui00, "", s:cterm00, "undercurl", s:gui0D)
-call <sid>hi("SpellRare",    "", s:gui00, "", s:cterm00, "undercurl", s:gui0E)
+call <sid>hi("SpellBad",     s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui08)
+call <sid>hi("SpellLocal",   s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0C)
+call <sid>hi("SpellCap",     s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0D)
+call <sid>hi("SpellRare",    s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0E)
 
 " Startify highlighting
 call <sid>hi("StartifyBracket",  s:gui03, "", s:cterm03, "", "", "")
