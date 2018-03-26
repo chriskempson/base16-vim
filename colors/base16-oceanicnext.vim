@@ -361,10 +361,10 @@ call <sid>hi("SignifySignChange",  s:gui0D, s:gui01, s:cterm0D, s:cterm01, "", "
 call <sid>hi("SignifySignDelete",  s:gui08, s:gui01, s:cterm08, s:cterm01, "", "")
 
 " Spelling highlighting
-call <sid>hi("SpellBad",     s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui08)
-call <sid>hi("SpellLocal",   s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0C)
-call <sid>hi("SpellCap",     s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0D)
-call <sid>hi("SpellRare",    s:gui05, s:gui00, s:cterm05, s:cterm00, "undercurl", s:gui0E)
+call <sid>hi("SpellBad",     "", "", "", "", "undercurl", s:gui08)
+call <sid>hi("SpellLocal",   "", "", "", "", "undercurl", s:gui0C)
+call <sid>hi("SpellCap",     "", "", "", "", "undercurl", s:gui0D)
+call <sid>hi("SpellRare",    "", "", "", "", "undercurl", s:gui0E)
 
 " Startify highlighting
 call <sid>hi("StartifyBracket",  s:gui03, "", s:cterm03, "", "", "")
@@ -377,6 +377,9 @@ call <sid>hi("StartifySection",  s:gui0E, "", s:cterm0E, "", "", "")
 call <sid>hi("StartifySelect",   s:gui0C, "", s:cterm0C, "", "", "")
 call <sid>hi("StartifySlash",    s:gui03, "", s:cterm03, "", "", "")
 call <sid>hi("StartifySpecial",  s:gui03, "", s:cterm03, "", "", "")
+
+" Java highlighting
+call <sid>hi("javaOperator",     s:gui0D, "", s:cterm0D, "", "", "")
 
 " Remove functions
 delf <sid>hi
