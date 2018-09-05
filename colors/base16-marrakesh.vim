@@ -121,6 +121,25 @@ if has("nvim")
     let g:terminal_color_background = g:terminal_color_7
     let g:terminal_color_foreground = g:terminal_color_2
   endif
+elseif has('terminal')
+  let g:terminal_ansi_colors = [
+        \ "#201602",
+        \ "#c35359",
+        \ "#18974e",
+        \ "#a88339",
+        \ "#477ca1",
+        \ "#8868b3",
+        \ "#75a738",
+        \ "#948e48",
+        \ "#6c6823",
+        \ "#c35359",
+        \ "#18974e",
+        \ "#a88339",
+        \ "#477ca1",
+        \ "#8868b3",
+        \ "#75a738",
+        \ "#faf0a5",
+        \ ]
 endif
 
 " Theme setup
