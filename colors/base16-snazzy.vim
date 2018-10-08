@@ -15,20 +15,20 @@ if !has('gui_running')
 endif
 
 " GUI color definitions
-let s:gui00        = "1e1f29"
-let g:base16_gui00 = "1e1f29"
+let s:gui00        = "282a36"
+let g:base16_gui00 = "282a36"
 let s:gui01        = "34353e"
 let g:base16_gui01 = "34353e"
-let s:gui02        = "4a4b53"
-let g:base16_gui02 = "4a4b53"
+let s:gui02        = "43454f"
+let g:base16_gui02 = "43454f"
 let s:gui03        = "78787e"
 let g:base16_gui03 = "78787e"
 let s:gui04        = "a5a5a9"
 let g:base16_gui04 = "a5a5a9"
-let s:gui05        = "eff0eb"
-let g:base16_gui05 = "eff0eb"
-let s:gui06        = "f1f1f0"
-let g:base16_gui06 = "f1f1f0"
+let s:gui05        = "e2e4e5"
+let g:base16_gui05 = "e2e4e5"
+let s:gui06        = "eff0eb"
+let g:base16_gui06 = "eff0eb"
 let s:gui07        = "f1f1f0"
 let g:base16_gui07 = "f1f1f0"
 let s:gui08        = "ff5c57"
@@ -99,14 +99,14 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#1e1f29"
+  let g:terminal_color_0 =  "#282a36"
   let g:terminal_color_1 =  "#ff5c57"
   let g:terminal_color_2 =  "#5af78e"
   let g:terminal_color_3 =  "#f3f99d"
   let g:terminal_color_4 =  "#57c7ff"
   let g:terminal_color_5 =  "#ff6ac1"
   let g:terminal_color_6 =  "#9aedfe"
-  let g:terminal_color_7 =  "#eff0eb"
+  let g:terminal_color_7 =  "#e2e4e5"
   let g:terminal_color_8 =  "#78787e"
   let g:terminal_color_9 =  "#ff5c57"
   let g:terminal_color_10 = "#5af78e"
@@ -129,7 +129,11 @@ syntax reset
 let g:colors_name = "base16-snazzy"
 
 " Highlighting function
-function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
+" Optional variables are attributes and guisp
+function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
+	let a:attr = get(a:, 1, "")
+	let a:guisp = get(a:, 2, "")
+
   if a:guifg != ""
     exec "hi " . a:group . " guifg=#" . a:guifg
   endif
@@ -333,6 +337,7 @@ call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpComparison",      s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "", "")
+call <sid>hi("phpMethodsVar",      s:gui0C, "", s:cterm0C, "", "", "")
 
 " Python highlighting
 call <sid>hi("pythonOperator",  s:gui0E, "", s:cterm0E, "", "", "")

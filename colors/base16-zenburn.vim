@@ -15,14 +15,14 @@ if !has('gui_running')
 endif
 
 " GUI color definitions
-let s:gui00        = "3f3f3f"
-let g:base16_gui00 = "3f3f3f"
+let s:gui00        = "383838"
+let g:base16_gui00 = "383838"
 let s:gui01        = "404040"
 let g:base16_gui01 = "404040"
 let s:gui02        = "606060"
 let g:base16_gui02 = "606060"
-let s:gui03        = "4f4f4f"
-let g:base16_gui03 = "4f4f4f"
+let s:gui03        = "6f6f6f"
+let g:base16_gui03 = "6f6f6f"
 let s:gui04        = "808080"
 let g:base16_gui04 = "808080"
 let s:gui05        = "dcdccc"
@@ -99,7 +99,7 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#3f3f3f"
+  let g:terminal_color_0 =  "#383838"
   let g:terminal_color_1 =  "#dca3a3"
   let g:terminal_color_2 =  "#5f7f5f"
   let g:terminal_color_3 =  "#e0cf9f"
@@ -107,7 +107,7 @@ if has("nvim")
   let g:terminal_color_5 =  "#dc8cc3"
   let g:terminal_color_6 =  "#93e0e3"
   let g:terminal_color_7 =  "#dcdccc"
-  let g:terminal_color_8 =  "#4f4f4f"
+  let g:terminal_color_8 =  "#6f6f6f"
   let g:terminal_color_9 =  "#dca3a3"
   let g:terminal_color_10 = "#5f7f5f"
   let g:terminal_color_11 = "#e0cf9f"
@@ -129,7 +129,11 @@ syntax reset
 let g:colors_name = "base16-zenburn"
 
 " Highlighting function
-function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
+" Optional variables are attributes and guisp
+function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
+	let a:attr = get(a:, 1, "")
+	let a:guisp = get(a:, 2, "")
+
   if a:guifg != ""
     exec "hi " . a:group . " guifg=#" . a:guifg
   endif
@@ -333,6 +337,7 @@ call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpMemberSelector",  s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpComparison",      s:gui05, "", s:cterm05, "", "", "")
 call <sid>hi("phpParent",          s:gui05, "", s:cterm05, "", "", "")
+call <sid>hi("phpMethodsVar",      s:gui0C, "", s:cterm0C, "", "", "")
 
 " Python highlighting
 call <sid>hi("pythonOperator",  s:gui0E, "", s:cterm0E, "", "", "")
