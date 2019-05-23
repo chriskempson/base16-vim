@@ -150,8 +150,8 @@ let g:colors_name = "base16-3024"
 " Highlighting function
 " Optional variables are attributes and guisp
 function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
-	let l:attr = get(a:, 1, "")
-	let l:guisp = get(a:, 2, "")
+  let l:attr = get(a:, 1, "")
+  let l:guisp = get(a:, 2, "")
 
   if a:guifg != ""
     exec "hi " . a:group . " guifg=#" . a:guifg
