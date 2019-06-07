@@ -121,6 +121,25 @@ if has("nvim")
     let g:terminal_color_background = g:terminal_color_7
     let g:terminal_color_foreground = g:terminal_color_2
   endif
+elseif has('terminal')
+  let g:terminal_ansi_colors = [
+        \ "#f6f6f6",
+        \ "#9c5a02",
+        \ "#38781c",
+        \ "#c48218",
+        \ "#48bac2",
+        \ "#a94598",
+        \ "#2d6bb1",
+        \ "#181818",
+        \ "#898989",
+        \ "#9c5a02",
+        \ "#38781c",
+        \ "#c48218",
+        \ "#48bac2",
+        \ "#a94598",
+        \ "#2d6bb1",
+        \ "#f8f8f8",
+        \ ]
 endif
 
 " Theme setup
@@ -131,8 +150,8 @@ let g:colors_name = "base16-ia-light"
 " Highlighting function
 " Optional variables are attributes and guisp
 function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
-	let a:attr = get(a:, 1, "")
-	let a:guisp = get(a:, 2, "")
+  let l:attr = get(a:, 1, "")
+  let l:guisp = get(a:, 2, "")
 
   if a:guifg != ""
     exec "hi " . a:group . " guifg=#" . a:guifg
@@ -146,11 +165,11 @@ function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
   if a:ctermbg != ""
     exec "hi " . a:group . " ctermbg=" . a:ctermbg
   endif
-  if a:attr != ""
-    exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
+  if l:attr != ""
+    exec "hi " . a:group . " gui=" . l:attr . " cterm=" . l:attr
   endif
-  if a:guisp != ""
-    exec "hi " . a:group . " guisp=#" . a:guisp
+  if l:guisp != ""
+    exec "hi " . a:group . " guisp=#" . l:guisp
   endif
 endfunction
 

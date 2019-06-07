@@ -15,38 +15,38 @@ if !has('gui_running')
 endif
 
 " GUI color definitions
-let s:gui00        = "263238"
-let g:base16_gui00 = "263238"
-let s:gui01        = "37474F"
-let g:base16_gui01 = "37474F"
-let s:gui02        = "455A64"
-let g:base16_gui02 = "455A64"
-let s:gui03        = "546E7A"
-let g:base16_gui03 = "546E7A"
-let s:gui04        = "90A4AE"
-let g:base16_gui04 = "90A4AE"
-let s:gui05        = "B0BEC5"
-let g:base16_gui05 = "B0BEC5"
-let s:gui06        = "CFD8DC"
-let g:base16_gui06 = "CFD8DC"
-let s:gui07        = "ECEFF1"
-let g:base16_gui07 = "ECEFF1"
-let s:gui08        = "FF1744"
-let g:base16_gui08 = "FF1744"
-let s:gui09        = "FF9100"
-let g:base16_gui09 = "FF9100"
-let s:gui0A        = "FFC400"
-let g:base16_gui0A = "FFC400"
-let s:gui0B        = "00E676"
-let g:base16_gui0B = "00E676"
-let s:gui0C        = "00B0FF"
-let g:base16_gui0C = "00B0FF"
-let s:gui0D        = "2979FF"
-let g:base16_gui0D = "2979FF"
-let s:gui0E        = "651FFF"
-let g:base16_gui0E = "651FFF"
-let s:gui0F        = "8D6E63"
-let g:base16_gui0F = "8D6E63"
+let s:gui00        = "202124"
+let g:base16_gui00 = "202124"
+let s:gui01        = "27292c"
+let g:base16_gui01 = "27292c"
+let s:gui02        = "323639"
+let g:base16_gui02 = "323639"
+let s:gui03        = "44464d"
+let g:base16_gui03 = "44464d"
+let s:gui04        = "676c71"
+let g:base16_gui04 = "676c71"
+let s:gui05        = "80868b"
+let g:base16_gui05 = "80868b"
+let s:gui06        = "9e9e9e"
+let g:base16_gui06 = "9e9e9e"
+let s:gui07        = "ffffff"
+let g:base16_gui07 = "ffffff"
+let s:gui08        = "f44336"
+let g:base16_gui08 = "f44336"
+let s:gui09        = "ff9800"
+let g:base16_gui09 = "ff9800"
+let s:gui0A        = "ffeb3b"
+let g:base16_gui0A = "ffeb3b"
+let s:gui0B        = "00e676"
+let g:base16_gui0B = "00e676"
+let s:gui0C        = "00bcd4"
+let g:base16_gui0C = "00bcd4"
+let s:gui0D        = "2196f3"
+let g:base16_gui0D = "2196f3"
+let s:gui0E        = "673ab7"
+let g:base16_gui0E = "673ab7"
+let s:gui0F        = "8d6e63"
+let g:base16_gui0F = "8d6e63"
 
 " Terminal color definitions
 let s:cterm00        = "00"
@@ -99,22 +99,22 @@ endif
 
 " Neovim terminal colours
 if has("nvim")
-  let g:terminal_color_0 =  "#263238"
-  let g:terminal_color_1 =  "#FF1744"
-  let g:terminal_color_2 =  "#00E676"
-  let g:terminal_color_3 =  "#FFC400"
-  let g:terminal_color_4 =  "#2979FF"
-  let g:terminal_color_5 =  "#651FFF"
-  let g:terminal_color_6 =  "#00B0FF"
-  let g:terminal_color_7 =  "#B0BEC5"
-  let g:terminal_color_8 =  "#546E7A"
-  let g:terminal_color_9 =  "#FF1744"
-  let g:terminal_color_10 = "#00E676"
-  let g:terminal_color_11 = "#FFC400"
-  let g:terminal_color_12 = "#2979FF"
-  let g:terminal_color_13 = "#651FFF"
-  let g:terminal_color_14 = "#00B0FF"
-  let g:terminal_color_15 = "#ECEFF1"
+  let g:terminal_color_0 =  "#202124"
+  let g:terminal_color_1 =  "#f44336"
+  let g:terminal_color_2 =  "#00e676"
+  let g:terminal_color_3 =  "#ffeb3b"
+  let g:terminal_color_4 =  "#2196f3"
+  let g:terminal_color_5 =  "#673ab7"
+  let g:terminal_color_6 =  "#00bcd4"
+  let g:terminal_color_7 =  "#80868b"
+  let g:terminal_color_8 =  "#44464d"
+  let g:terminal_color_9 =  "#f44336"
+  let g:terminal_color_10 = "#00e676"
+  let g:terminal_color_11 = "#ffeb3b"
+  let g:terminal_color_12 = "#2196f3"
+  let g:terminal_color_13 = "#673ab7"
+  let g:terminal_color_14 = "#00bcd4"
+  let g:terminal_color_15 = "#ffffff"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_5
   if &background == "light"
@@ -123,22 +123,22 @@ if has("nvim")
   endif
 elseif has('terminal')
   let g:terminal_ansi_colors = [
-        \ "#263238",
-        \ "#FF1744",
-        \ "#00E676",
-        \ "#FFC400",
-        \ "#2979FF",
-        \ "#651FFF",
-        \ "#00B0FF",
-        \ "#B0BEC5",
-        \ "#546E7A",
-        \ "#FF1744",
-        \ "#00E676",
-        \ "#FFC400",
-        \ "#2979FF",
-        \ "#651FFF",
-        \ "#00B0FF",
-        \ "#ECEFF1",
+        \ "#202124",
+        \ "#f44336",
+        \ "#00e676",
+        \ "#ffeb3b",
+        \ "#2196f3",
+        \ "#673ab7",
+        \ "#00bcd4",
+        \ "#80868b",
+        \ "#44464d",
+        \ "#f44336",
+        \ "#00e676",
+        \ "#ffeb3b",
+        \ "#2196f3",
+        \ "#673ab7",
+        \ "#00bcd4",
+        \ "#ffffff",
         \ ]
 endif
 
@@ -150,8 +150,8 @@ let g:colors_name = "base16-material-vivid"
 " Highlighting function
 " Optional variables are attributes and guisp
 function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
-	let a:attr = get(a:, 1, "")
-	let a:guisp = get(a:, 2, "")
+  let l:attr = get(a:, 1, "")
+  let l:guisp = get(a:, 2, "")
 
   if a:guifg != ""
     exec "hi " . a:group . " guifg=#" . a:guifg
@@ -165,11 +165,11 @@ function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, ...)
   if a:ctermbg != ""
     exec "hi " . a:group . " ctermbg=" . a:ctermbg
   endif
-  if a:attr != ""
-    exec "hi " . a:group . " gui=" . a:attr . " cterm=" . a:attr
+  if l:attr != ""
+    exec "hi " . a:group . " gui=" . l:attr . " cterm=" . l:attr
   endif
-  if a:guisp != ""
-    exec "hi " . a:group . " guisp=#" . a:guisp
+  if l:guisp != ""
+    exec "hi " . a:group . " guisp=#" . l:guisp
   endif
 endfunction
 
