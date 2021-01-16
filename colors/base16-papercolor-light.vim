@@ -25,12 +25,12 @@ let s:gui03        = "5f8700"
 let g:base16_gui03 = "5f8700"
 let s:gui04        = "0087af"
 let g:base16_gui04 = "0087af"
-let s:gui05        = "878787"
-let g:base16_gui05 = "878787"
+let s:gui05        = "444444"
+let g:base16_gui05 = "444444"
 let s:gui06        = "005f87"
 let g:base16_gui06 = "005f87"
-let s:gui07        = "444444"
-let g:base16_gui07 = "444444"
+let s:gui07        = "878787"
+let g:base16_gui07 = "878787"
 let s:gui08        = "bcbcbc"
 let g:base16_gui08 = "bcbcbc"
 let s:gui09        = "d70000"
@@ -106,7 +106,7 @@ if has("nvim")
   let g:terminal_color_4 =  "#d75f00"
   let g:terminal_color_5 =  "#005faf"
   let g:terminal_color_6 =  "#d75f00"
-  let g:terminal_color_7 =  "#878787"
+  let g:terminal_color_7 =  "#444444"
   let g:terminal_color_8 =  "#5f8700"
   let g:terminal_color_9 =  "#bcbcbc"
   let g:terminal_color_10 = "#8700af"
@@ -114,7 +114,7 @@ if has("nvim")
   let g:terminal_color_12 = "#d75f00"
   let g:terminal_color_13 = "#005faf"
   let g:terminal_color_14 = "#d75f00"
-  let g:terminal_color_15 = "#444444"
+  let g:terminal_color_15 = "#878787"
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_5
   if &background == "light"
@@ -130,7 +130,7 @@ elseif has("terminal")
         \ "#d75f00",
         \ "#005faf",
         \ "#d75f00",
-        \ "#878787",
+        \ "#444444",
         \ "#5f8700",
         \ "#bcbcbc",
         \ "#8700af",
@@ -138,7 +138,7 @@ elseif has("terminal")
         \ "#d75f00",
         \ "#005faf",
         \ "#d75f00",
-        \ "#444444",
+        \ "#878787",
         \ ]
 endif
 
