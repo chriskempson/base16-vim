@@ -1,6 +1,6 @@
 # Base16 Vim
-See the [Base16 repository](https://github.com/chriskempson/base16) for more information.  
-This theme was built with [Base16 Builder PHP](https://github.com/chriskempson/base16-builder-php).
+See the [Base16 repository](https://github.com/chriskempson/base16) for more information.
+This theme was built with [base16-builder-python](https://github.com/InspectorMustache/base16-builder-python).
 
 Supports graphical Vim and console Vim.
 
@@ -35,13 +35,13 @@ Add the following to your `~/.vimrc` file and run `PlugInstall` in Vim.
     cd ~/.vim/colors
     git clone git://github.com/chriskempson/base16-vim.git base16
     cp base16/colors/*.vim .
-    
-## 256 colorspace 
+
+## 256 colorspace
 If using a Base16 terminal theme designed to keep the 16 ANSI colors intact (a "256" variation) **and** have sucessfully modified your 256 colorspace with [base16-shell](https://github.com/chriskempson/base16-shell) you'll need to add the following to your `~/.vimrc` **before** the colorsheme declaration.
 
     let base16colorspace=256  " Access colors present in 256 colorspace
 
-This will cause vim to access the colours in the modified 256 colorspace. Please **do not** enable this simply because you have a 256 color terminal as this will cause colors to be displayed incorrectly. 
+This will cause vim to access the colours in the modified 256 colorspace. Please **do not** enable this simply because you have a 256 color terminal as this will cause colors to be displayed incorrectly.
 
 ## Troubleshooting
 There is a script to help troubleshoot colour issues called `colortest` available in the [Base16 Shell](https://github.com/chriskempson/base16-shell) repository.
@@ -77,4 +77,20 @@ augroup on_change_colorschema
   autocmd!
   autocmd ColorScheme * call s:base16_customize()
 augroup END
+```
+
+## Building
+Dependencies:
+
+- Python, at least version 3.5
+- The `pybase16` command from [base16-builder-python](https://github.com/InspectorMustache/base16-builder-python)
+- The `make` command
+
+```
+# Install dependencies (you probably already have pip/pip3 and make)
+apt install build-essential # for make
+pip3 install pybase16-builder
+
+# Build the packages
+make
 ```
