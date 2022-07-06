@@ -4,12 +4,12 @@ This theme was built with [Base16 Builder PHP](https://github.com/chriskempson/b
 
 Supports graphical Vim and console Vim.
 
-![Base16 Vim](https://raw.github.com/chriskempson/base16-vim/master/base16-vim.png)
+![Base16 Vim](base16-vim.png)
 
 ## Terminal Themes
 For terminal Vim (non-gui) please ensure you are using a base16 terminal theme.
 
-* [iTerm2](https://github.com/chriskempson/base16-iterm2)
+* [iTerm2](base16-iterm2)
 
 ## Installation
 
