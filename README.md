@@ -29,7 +29,26 @@ Add the following to your `~/.vimrc` file and run `PlugInstall` in Vim.
 
     cd ~/.vim/bundle
     git clone https://github.com/chriskempson/base16-vim.git
+    
+### Lazy
 
+    {
+        "chriskempson/base16-vim",
+        config = function()
+            vim.cmd.colorscheme 'base16-default-dark'
+        end,
+    }
+
+### Packer
+
+    use {
+        "chriskempson/base16-vim",
+        config = function()
+            vim.cmd.colorscheme 'base16-default-dark'
+        end,
+    }
+    
+    
 ### Manual
 
     cd ~/.vim/colors
